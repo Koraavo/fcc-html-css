@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" <title>Checklist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <!-- Google fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+        rel="stylesheet"> -->
+    <link rel="stylesheet" href="./billiesurvey.css">
+</head>
+
+<body>
+    <header>
+        <div class="headline-container">
+            <h1 id="title">Billie Eilish</h1>
+            <p id="who"> Billie Eilish Pirate Baird O'Connell is an American singer and songwriter. She first gained
+                public attention in 2015 with her debut single "Ocean Eyes"</p>
+            <p id="description"><strong>Which is your favourite Album and Song</strong></p>
+        </div>
+    </header>
+
+    <main>
+        <!-- <div class="billie-bg">
+            <picture>
+                <source media="(max-width: 650px)" srcset="https://i.ibb.co/vHcGpwM/billie-640.png">
+                <img src="https://i.ibb.co/yR8Zkwq/billie.jpg" alt="billie" class="small-size-billie">
+            </picture>
+        </div> -->
+
+        <form id="survey-form">
+            <fieldset class="details-fieldset">
+                <legend>Your Details</legend>
+                <div class="input-div">
+                    <div>
+                        <label id="name-label"> Name</label>
+                        <input type="text" name="Name" placeholder="Enter Your First and Last Name" id="name" required>
+                    </div>
+                    <div>
+                        <label id="email-label"> Email</label>
+                        <input type="email" name="email" placeholder="eg. abc@xyz.com" id="email" required>
+                    </div>
+                    <div>
+                        <label id="number-label"> Year you First Heard Billie</label>
+                        <input type="number" name="year" id="number" max="2022" min="2013" placeholder="2013-2022"
+                            class="year-billie">
+                    </div>
+                </div>
+
+                <div class="gender-div">
+                    <!-- <label id="gender-label"> Gender</label> -->
+                    <span class="radiobuttons">
+                        <input type="radio" name="gender" class="inline" value="Male" id="Male">
+                        <label for="Male">Male</label>
+
+                        <input type="radio" name="gender" class="inline" value="Female" id="Female">
+                        <label for="Female">Female</label>
+
+                        <input type="radio" name="gender" class="inline" value="Other" id="Other">
+                        <label for="Other">Other</label>
+                        <input type="text" name="gender" placeholder="Other" id="textOther" />
+
+                        <input type="radio" name="gender" class="inline" value="Prefer" id="Prefer">
+                        <label for="Prefer">Prefer not to say</label>
+                    </span>
+                </div>
+            </fieldset>
+            <!--end of inputentries-->
+            <fieldset class="favourite-fieldset">
+                <legend>Your Favorite Songs and Albums</legend>
+                <fieldset class="favorite-song-fieldset">
+                    <legend>
+                        Songs
+                    </legend>
+                    <div class="checkbox-container">
+                        <div class="checkbox-div">
+                            <input type="checkbox" name="check" value="Lovely" id="Lovely">
+                            <label for="Lovely">Lovely</label>
+                        </div>
+
+                        <div class="checkbox-div">
+                            <input type="checkbox" name="check" value="Ocean Eyes" id="Ocean-Eyes">
+                            <label for="Ocean-Eyes">Ocean Eyes</label>
+                        </div>
+
+                        <div class="checkbox-div">
+                            <input type="checkbox" name="check" value="Happier Than Ever" id="Happier-Than-Ever">
+                            <label for="Happier-Than-Ever">Happier Than Ever</label>
+                        </div>
+
+                        <div class="checkbox-div">
+                            <input type="checkbox" name="check" value="Bad Guy" id="Bad-Guy">
+                            <label for="Bad-Guy">Bad Guy</label>
+                        </div>
+
+                        <div class="checkbox-div">
+                            <input type="checkbox" name="check" value="Bellyache" id="Bellyache">
+                            <label for="Bellyache">Bellyache</label>
+                        </div>
+
+                        <div class="checkbox-div">
+                            <input type="checkbox" name="check" value="I love you" id="I-love-you">
+                            <label for="I-love-you">I love you</label>
+                        </div>
+
+                        <div class="checkbox-div">
+                            <input type="checkbox" name="check" value="Copycat" id="Copycat">
+                            <label for="Copycat">Copycat</label>
+                        </div>
+
+                        <div class="checkbox-div">
+                            <input type="checkbox" name="check" value="Everything I wanted" id="Everything-I-wanted">
+                            <label for="Everything-I-wanted">Everything I wanted</label>
+                        </div>
+
+                        <div class="checkbox-div">
+                            <input type="checkbox" name="check" value="My Strange Addiction" id="My-Strange-Addiction">
+                            <label for="My-Strange-Addiction">My Strange Addiction</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="best-album-fieldset">
+                    <legend>Albums</legend>
+                    <div class="dropdown">
+                        <select id="dropdown" multiple>
+                            <!-- <option value="" disabled>Select current role</option> -->
+                            <option value="1">Happier than ever</option>
+                            <option value="2">When we all fall asleep, where do we go?</option>
+                            <option value="3">Don’t Smile at me</option>
+                            <option value="4">Prefer Not To Say</option>
+                            <option value="5">Other</option>
+                        </select>
+                    </div>
+                </fieldset>
+            </fieldset>
+
+            <fieldset class="text-area-fieldset">
+                <legend>
+                    Comments and Other Music Suggestions
+                </legend>
+                <div class="textAreaDiv">
+                    <textarea class="textareainput" placeholder="Enter your comments here" rows="10"
+                        cols="100"></textarea>
+                </div>
+            </fieldset>
+            <input type="submit" value="Submit" class="submit-button" id="submit" />
+        </form>
+    </main>
+    <footer>
+        <p class="footerText">Project by Kinjal</p>
+    </footer>
+</body>
+
+</html>

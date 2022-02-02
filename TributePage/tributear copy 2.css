@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Fresca', sans-serif;
+    background-color: rgb(249, 249, 249);
+    color: rgb(20, 159, 184);
+}
+
+/* 
+
+If I want the header fixed
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    background: rgb(114, 114, 114);
+    width: 100%;
+    margin: auto;
+}
+
+.navbar {
+    width: 75%;
+    margin: auto;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+*/
+
+li {
+    list-style: none;
+}
+
+.container {
+    background: rgb(249, 249, 249)  ;
+    width: 100%;
+    margin: auto;
+}
+
+.navbar {
+    width: 75%;
+    margin: auto;
+    min-height: 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+
+/* image and text containers */
+
+
+.hero-container {
+    max-width: 120rem;
+    padding-top: 1rem;
+    
+  }
+
+img {
+    display: block;
+    max-width: 90%;
+    width: 80%;
+    border: 1px solid rgba(114, 114, 114);
+    margin: 0 auto;
+    
+}
+
+.hero-text-box {
+    position: absolute;
+    top: 20%;
+    left: 75%;
+    transform: translate(-70%, 30%);
+}
+
+#title {
+    font-family: 'Dr Sugiyama', cursive;
+    font-size: 8rem;
+    color: white;
+}
+
+.hero-text-box>p {
+    position: absolute;
+    font-size: 2rem;
+    top: 80%;
+    left: 60%;
+} 
+
+/* sections */
+section {
+    margin: 0 auto;
+    text-align: center;
+}
+

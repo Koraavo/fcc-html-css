@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <!-- Google fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+        rel="stylesheet"> -->
+
+
+    <link rel="stylesheet" href="./css/checklist-kinjal.css">
+</head>
+
+<body>
+    <header>
+        <img src="https://i.ibb.co/17wK4d3/fcclogo.png" alt="fcclogo" class="logo">
+    </header>
+
+    <main>
+        <div class="headline-container">
+            <h1 id="title">Required Elements and Attributes For The Survey Form</h1>
+            <p id="description">Have you made sure the following requirements are fulfilled in your
+                <a
+                    href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-survey-form-project/build-a-survey-form">FCC's
+                    Survey Project</a>
+            </p>
+        </div>
+        <form id="survey-form">
+
+            <!-- First three fields of elements and attributes -->
+            <fieldset class="requiredformfield">
+                <h2>
+                    <span class="keyboard">elements</span> + <span class="attributes">attributes</span>
+                </h2>
+
+                <div class="checkbox-container">
+
+                    <div class="article">
+                        <samp class="brief"> Brief title</samp>
+                        <input type="checkbox" name="check" value="1" id="1">
+                        <label for="1">
+                            <span class="keyboard">
+                                <samp>&lt;h1 <span class="attributes">id="title"</span> &gt;</samp>
+                            </span>
+                        </label>
+                    </div>
+
+
+                    <div class="article">
+                        <samp class="brief"> Brief description</samp>
+                        <input type="checkbox" name="check" value="2" id="2">
+                        <label for="2">
+                            <span class="keyboard">
+                                <samp>&lt;p <span class="attributes">id="description"</span> &gt;</samp>
+                            </span>
+                        </label>
+                    </div>
+
+
+                    <div class="article">
+                        <input type="checkbox" name="check" value="3" id="3">
+                        <label for="3">
+                            <span class="keyboard">
+                                <samp>&lt;form <span class="attributes">id="survey-form"</span> &gt;</samp>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- required form fields -->
+            <fieldset class="requiredformfield">
+                <h2>
+                    <span class="attributes">REQUIRED</span> <span class="keyboard">FORM</span> <span
+                        class="attributes">FIELDS</span>
+                </h2>
+
+
+
+                <div class="checkbox-container">
+
+
+                    <div class="article">
+                        <samp class="brief">Name</samp>
+                        <input type="checkbox" name="check" value="4" id="4">
+                        <label for="4">
+                            <span class="keyboard">
+                                &lt;label
+                                <span class="attributes">id="name-label"</span> &gt;
+                            </span>
+                        </label>
+                    </div>
+
+
+                    <div class="article">
+                        <samp class="brief">Required Name Field</samp>
+                        <input type="checkbox" name="check" value="5" id="5">
+                        <label for="5">
+                            <span class="keyboard">
+                                &lt;input
+                                type="text" name="name"
+                                placeholder=""
+                                <span class="attributes">id="name" required</span> &gt;
+                            </span>
+                        </label>
+                    </div>
+
+
+                    <div class="article">
+                        <samp class="brief">Email</samp>
+                        <input type="checkbox" name="check" value="6" id="6">
+                        <label for="6">
+                            <span class="keyboard">
+                                &lt;label
+                                <span class="attributes">id="email-label"</span> &gt;
+                            </span>
+                        </label>
+                    </div>
+
+
+                    <div class="article">
+                        <samp class="brief">Required Email Field</samp>
+                        <input type="checkbox" name="check" value="7" id="7">
+                        <label for="7">
+                            <span class="keyboard">
+                                &lt;input
+                                type="email" name="email"
+                                placeholder=""
+                                <span class="attributes">id="email" required</span> &gt;
+                            </span>
+                        </label>
+                    </div>
+
+
+                    <div class="article">
+                        <samp class="brief">Number</samp>
+                        <input type="checkbox" name="check" value="8" id="8">
+                        <label for="8">
+                            <span class="keyboard">
+                                &lt;label
+                                <span class="attributes">id="number-label"</span> &gt;
+                            </span>
+                        </label>
+                    </div>
+
+
+                    <div class="article">
+                        <samp class="brief">Number Field</samp>
+                        <input type="checkbox" name="check" value="9" id="9">
+                        <label for="9">
+                            <span class="keyboard">
+                                &lt;input
+                                type="number" name="age"
+                                <span class="attributes">id="number" min="10" max="100"</span> &gt;
+                            </span>
+                        </label>
+                    </div>
+
+
+                    <div class="article">
+                        <samp class="brief">Dropdown Menu</samp>
+                        <input type="checkbox" name="check" value="10" id="10">
+                        <label for="10">
+                            <span class="keyboard">
+                                &lt;select
+                                <span class="attributes">id="dropdown"</span> &gt;
+                            </span>
+                            <span class="plus"><strong>+</strong></span>
+                            <span class="keyboard">
+                                &lt;option
+                                <span class="attributes">value=""</span> &gt;
+                            </span>
+                        </label>
+                    </div>
+
+
+                    <div class="article">
+                        <samp class="brief">Radio Button Menu with same name attribute</samp>
+                        <input type="checkbox" name="check" value="11" id="11">
+                        <label for="11">
+                            <span class="keyboard">
+                                &lt;input
+                                <span class="attributes">type="radio" name="" value=""</span> &gt;
+                            </span>
+                        </label>
+                    </div>
+
+
+                    <div class="article">
+                        <samp class="brief">Checkbox Menu with same name attribute</samp>
+                        <input type="checkbox" name="check" value="12" id="12">
+                        <label for="12">
+                            <span class="keyboard">
+                                &lt;input
+                                <span class="attributes">type="checkbox" name="" value=""</span> &gt;
+                            </span>
+                        </label>
+                    </div>
+
+
+                    <div class="article">
+                        <samp class="brief">TextArea</samp>
+                        <input type="checkbox" name="check" value="13" id="13">
+                        <label for="13">
+                            <span class="keyboard">
+                                &lt;textarea
+                                <span class="attributes">row="" cols=""</span> &gt;
+                            </span>
+                        </label>
+                    </div>
+
+
+                    <div class="article">
+                        <samp class="brief">Submit</samp>
+                        <input type="checkbox" name="check" value="14" id="14">
+                        <label for="14">
+                            <span class="keyboard">
+                                &lt;input
+                                <span class="attributes">type="submit" id="submit" value="submit"</span> &gt;
+                            </span>
+                        </label>
+                    </div>
+
+
+                </div>
+            </fieldset>
+            <!--End of requiredformfields-->
+
+            <div class="examplesurveyformheadline">
+                <h1>Example Survey Form</h1>
+            </div>
+
+
+            <fieldset class="inputsEntries">
+                <div class="settings">
+                    <label id="name-label"> Name</label>
+                    <input type="text" name="Name" placeholder="Enter Your Full Name" id="name" required>
+
+                    <label id="email-label"> Email</label>
+                    <input type="email" name="email" placeholder="Enter Your Email Address in the correct format"
+                        id="email" required>
+
+                    <label id="number-label"> Age</label>
+                    <input type="number" name="age" id="age" max="99" min="10">
+                </div>
+
+
+                <fieldset class="gender-fieldset">
+                    <div>
+                        <label>Gender</label>
+                        <span class="radiobuttons">
+                            <input type="radio" name="gender" class="inline" value="Male" id="Male">
+                            <label for="Male">Male</label>
+
+                            <input type="radio" name="gender" class="inline" value="Female" id="Female">
+                            <label for="Female">Female</label>
+
+                            <input type="radio" name="gender" class="inline" value="Other" id="Other">
+                            <label for="Other">Other</label>
+                            <input type="text" name="gender" placeholder="Other" id="textOther" />
+
+                            <input type="radio" name="gender" class="inline" value="Prefer" id="Prefer">
+                            <label for="Prefer">Prefer not to say</label>
+                        </span>
+                    </div>
+                </fieldset>
+
+                <fieldset class="courses-completed">
+                    <div class="checkbox-container">
+                        <label>What Courses have you completed on Free Code Camp?</label>
+                        <div class="article">
+                            <input type="checkbox" name="check" value="Responsive Web Design Certification"
+                                id="Responsive Web Design Certification">
+                            <label for="Responsive Web Design Certification">
+                                <span>
+                                    Responsive Web Design Certification
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="article">
+                            <input type="checkbox" name="check" value="JavaScript Algorithms And Data Structures"
+                                id="JavaScript Algorithms And Data Structures">
+                            <label for="JavaScript Algorithms And Data Structures">
+                                <span>
+                                    JavaScript Algorithms And Data Structures
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="article">
+                            <input type="checkbox" name="check" value="Front-end Libraries Development Certification"
+                                id="Front-end Libraries Development Certification">
+                            <label for="Front-end Libraries Development Certification">
+                                <span>
+                                    Front-end Libraries Development Certification
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="article">
+                            <input type="checkbox" name="check" value="Data Visualization Certification"
+                                id="Data Visualization Certification">
+                            <label for="Data Visualization Certification">
+                                <span>
+                                    Data Visualization Certification
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="article">
+                            <input type="checkbox" name="check" value="Back-end Development Certification"
+                                id="Back-end Development Certification">
+                            <label for="Back-end Development Certification">
+                                <span>
+                                    Back-end Development Certification
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="article">
+                            <input type="checkbox" name="check" value="Scientific Computing with Python Certification"
+                                id="Scientific Computing with Python Certification">
+                            <label for="Scientific Computing with Python Certification">
+                                <span>
+                                    Scientific Computing with Python Certification
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+
+                </fieldset>
+
+
+                <div class="dropdown">
+                    <label>Which option best describes your current role?
+                        <select id="dropdown">
+                            <option value="">Select current role</option>
+                            <option value="1">Student</option>
+                            <option value="2">Full Time Job</option>
+                            <option value="3">Full Time Learner</option>
+                            <option value="4">Prefer Not To Say</option>
+                            <option value="5">Other</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div>
+                    <label class="textAreaLabel">Any comments or suggestions?</label>
+                    <textarea placeholder="Enter your comment here" rows="10" cols="100"></textarea>
+                </div>
+            </fieldset>
+            <!--end of inputentries-->
+
+            <div class="submitButton">
+                <input type="submit" value="Submit" id="submit" />
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p class="footerText">Project by Kinjal Inspired by another Project from @mrsmmadams</p>
+    </footer>
+</body>
+
+</html>

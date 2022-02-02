@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(249, 249, 249);
+    /* color: white; */
+    margin-top: 2px;
+}
+
+.ul-list {
+    display: flex;
+    justify-content: end;
+    gap: 5rem;
+    margin: .75rem 7rem;
+    font-size: 2rem;
+    font-weight: 600;
+    list-style: none;
+    
+}
+
+/* image and text containers */
+
+.hero-container {
+    max-width: 120rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 9.6rem;
+  }
+
+
+img {
+    display: block;
+    max-width: 90%;
+    width: 90%;
+    border: 1px solid rgb(114, 114, 114);
+    margin: 0 auto;
+    
+}
+
+.hero-text-box {
+    margin: 0 auto;
+}
+
+#title {
+    font-family: 'Dr Sugiyama', cursive;
+    position: absolute;
+    top: 20%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    font-size: 8rem;
+}
+
+p {
+    position: absolute;
+    top: 27%;
+    left: 82%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+} 
+

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <!-- Google fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+        rel="stylesheet"> -->
+
+
+    <link rel="stylesheet" href="./css/Survey2.css">
+</head>
+
+<body>
+    <header>
+        <img src="https://i.ibb.co/17wK4d3/fcclogo.png" alt="fcclogo" class="logo">
+    </header>
+
+    <main>
+
+        <div class="headline-container">
+            <h1 id="title">Example Survey Form</h1>
+            <p id="description">How often do you learn from Free Code Camp</p>
+        </div>
+        <fieldset class="inputsEntries">
+            <div class="settings">
+                <label id="name-label"> Name</label>
+                <input type="text" name="Name" placeholder="Enter Your Full Name" id="name" required>
+
+                <label id="email-label"> Email</label>
+                <input type="email" name="email" placeholder="Enter Your Email Address in the correct format" id="email"
+                    required>
+
+                <label id="number-label"> Age</label>
+                <input type="number" name="age" id="age" max="99" min="10">
+            </div>
+
+
+            <fieldset class="gender-fieldset">
+                <div>
+                    <label id="gender-label"> Gender</label>
+                    <span class="radiobuttons">
+                        <input type="radio" name="gender" class="inline" value="Male" id="Male">
+                        <label for="Male">Male</label>
+
+                        <input type="radio" name="gender" class="inline" value="Female" id="Female">
+                        <label for="Female">Female</label>
+
+                        <input type="radio" name="gender" class="inline" value="Other" id="Other">
+                        <label for="Other">Other</label>
+                        <input type="text" name="gender" placeholder="Other" id="textOther" />
+
+                        <input type="radio" name="gender" class="inline" value="Prefer" id="Prefer">
+                        <label for="Prefer">Prefer not to say</label>
+                    </span>
+                </div>
+            </fieldset>
+
+            <fieldset class="courses-completed">
+                <div class="checkbox-container">
+                    <label class="courses-completed-label">What Courses have you completed on Free Code Camp?</label>
+                    <div class="article">
+                        <input type="checkbox" name="check" value="Responsive Web Design Certification"
+                            id="Responsive Web Design Certification">
+                        <label for="Responsive Web Design Certification">
+                            <span>
+                                Responsive Web Design Certification
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="article">
+                        <input type="checkbox" name="check" value="JavaScript Algorithms And Data Structures"
+                            id="JavaScript Algorithms And Data Structures">
+                        <label for="JavaScript Algorithms And Data Structures">
+                            <span>
+                                JavaScript Algorithms And Data Structures
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="article">
+                        <input type="checkbox" name="check" value="Front-end Libraries Development Certification"
+                            id="Front-end Libraries Development Certification">
+                        <label for="Front-end Libraries Development Certification">
+                            <span>
+                                Front-end Libraries Development Certification
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="article">
+                        <input type="checkbox" name="check" value="Data Visualization Certification"
+                            id="Data Visualization Certification">
+                        <label for="Data Visualization Certification">
+                            <span>
+                                Data Visualization Certification
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="article">
+                        <input type="checkbox" name="check" value="Back-end Development Certification"
+                            id="Back-end Development Certification">
+                        <label for="Back-end Development Certification">
+                            <span>
+                                Back-end Development Certification
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="article">
+                        <input type="checkbox" name="check" value="Scientific Computing with Python Certification"
+                            id="Scientific Computing with Python Certification">
+                        <label for="Scientific Computing with Python Certification">
+                            <span>
+                                Scientific Computing with Python Certification
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+
+            </fieldset>
+
+
+            <div class="dropdown">
+                <label class="current-role-label">Which option best describes your current role?
+                    <select id="dropdown">
+                        <option value="">Select current role</option>
+                        <option value="1">Student</option>
+                        <option value="2">Full Time Job</option>
+                        <option value="3">Full Time Learner</option>
+                        <option value="4">Prefer Not To Say</option>
+                        <option value="5">Other</option>
+                    </select>
+                </label>
+            </div>
+
+            <div>
+                <label class="textAreaLabel">Any comments or suggestions?</label>
+                <textarea placeholder="Enter your comment here" rows="10" cols="100"></textarea>
+            </div>
+        </fieldset>
+        <!--end of inputentries-->
+
+        <div class="submitButton">
+            <input type="submit" value="Submit" id="submit" />
+        </div>
+        </form>
+    </main>
+    <footer>
+        <p class="footerText">Project by Kinjal Inspired by another Project from @mrsmmadams</p>
+    </footer>
+</body>
+
+</html>

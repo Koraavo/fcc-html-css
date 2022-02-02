@@ -1,0 +1,424 @@
+:root {
+    --clr: rgb(20, 159, 184);
+    --hov: rgb(14, 137, 158);
+    --timeline-bg:  rgb(46, 46, 46);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html {
+    font-size: 62.5%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    /* background-color: rgb(43, 23, 23); */
+    color: var(--clr)
+}
+
+section {
+    margin: 2rem auto;
+    padding: 1rem 0 0 0;
+    width: 95%;
+    overflow-y: hidden;
+    border-radius: .5rem;
+    /* border: 1px red solid; */
+}
+
+/* for the nav buttons */
+
+
+.header {
+    background-color: #fff;
+    box-shadow: 1px 1px .4rem 0 rgba(0, 0, 0, .1);
+    /* position: fixed; */
+    width: 100%;
+    /* z-index: 3; */
+}
+
+nav {
+    padding: .75rem  2rem;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.menu {
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+.menu a {
+    color: black;
+    font-size: 1.8rem;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    border-right: 1px solid #aaa;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.menu-icon {
+    padding: 2rem;
+    cursor: pointer;
+}
+
+.menu li {
+    padding: 1.5rem .5rem;
+}
+
+.item {
+    width: 100%;
+    text-align: center;
+    /* height: 0; */
+}
+
+.nav-icon,
+.nav-icon::before,
+.nav-icon::after   {
+    background-color: #000;
+    display: block;
+    height: .2rem;
+    width: 2rem;
+    position: relative;
+    transition: background .2s ease-out;
+}
+
+.nav-icon::before {
+    content: '';
+    position: absolute;
+    top: -.5rem;
+}
+
+.nav-icon::after {
+    content: '';
+    position: absolute;
+    top: .5rem;
+}
+
+.menu-btn:checked ~ .menu{
+    display: block;
+    max-height: 25rem;
+}
+
+.menu-btn:checked ~ .menu-icon .nav-icon{
+    background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .nav-icon::before{
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.menu-btn:checked ~ .menu-icon .nav-icon::after{
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+
+/* Rest of the sections */
+
+img {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: .5rem;
+    /* top: 3.5rem; */
+    /* margin-bottom: -40px; */
+}
+
+#img-div {
+    position: relative;
+    text-align: center;
+}
+
+#img-caption {
+    font-size: 1.2rem;
+    color: black;
+    padding: .5em 0;
+    /* background: rgb(44, 44, 44); */
+}
+
+.hero-text-box {
+    position: absolute;
+    top: 12rem;
+    left: 50vw;
+}
+
+.hero-title {
+    font-family: 'Dr Sugiyama', cursive;
+    font-size: 8vw;
+    color: white;
+}
+
+.hero-subtitle {
+    font-family: 'Fresca', sans-serif;
+    font-size: 4vw;
+    position: relative;
+    top: -.5em;
+    left: 25%;
+}
+
+/* about section */
+
+
+/* timeline creation */
+
+.time {
+    background-color: #f3eded;
+    /* background-color: #aca7a7; */
+    height: auto;
+    max-width: 100vw;
+    position: relative;
+}
+
+.timeline-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.timeline {
+    width: 90%;
+    height: auto;
+    max-width: 100vw;
+    margin: 0 auto;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline ul {
+    list-style: none;
+}
+
+.timeline ul li {
+    padding: 20px;
+    /* background: var(--hov); */
+    background-color: var(--timeline-bg);
+    color: #ddd;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.timeline ul li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-content h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+
+}
+
+.timeline-content p {
+    font-size: 1.5em;
+    line-height: 2.2rem;
+    font-weight: 300;
+}
+
+.timeline-content .date {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#music h1,
+#tribute-info h1 {
+    margin: 1rem 2rem;
+    color: #000;
+
+}
+
+.tribute-external {
+    text-align: center;
+    margin: 0 auto;
+    padding: 1.5rem;
+    /* background-color: var(--timeline-bg); */
+    border-radius: .5rem;
+}
+
+.tribute-external a{
+    color: rgb(3, 3, 3);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 1.5rem 0;
+}
+
+.tribute-external a:hover {
+    color: var(--hov)
+}
+
+
+/* footer */
+
+footer {
+    background: #ddd;
+    /* padding: 3rem 0; */
+    width: 100%;
+    text-align:  center;
+}
+
+.icons {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.icons .fab{
+    margin: 0 3rem;
+    cursor: pointer;
+    padding: 2rem 0;
+    font-size: 3rem;
+    color: rgb(22, 22, 22);
+}
+
+.icons .fab:hover {
+    color: var(--hov);
+}
+
+
+@media (min-width: 600px) {
+
+    /* nav in big display mode */
+    .menu {
+        all: unset;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .menu li{
+        padding: 0;
+        list-style: none;
+    }
+
+    .menu a {
+        text-decoration: none;
+        padding: .75rem 0;
+        /* border: 1px red solid; */
+    }
+
+    .menu a:hover {
+        text-decoration: underline;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    /* end nav in big display mode */
+
+    /* timeline creation */
+
+    .timeline ul li {
+        width: 50%;
+        margin-bottom: 5rem;
+        position: relative;
+    }
+
+    /* separation of even and odd items */
+
+    .timeline ul li:nth-child(odd) {
+        float: left;
+        clear: right;
+        margin-left: -2rem;
+        border-radius: 1rem 0 1rem 1rem;
+    }
+
+    .timeline ul li:nth-child(even) {
+        float: right;
+        clear: left;
+        margin-right: -2rem;
+        border-radius: 0 1rem 1rem 1rem;
+    }
+
+    /* circular thing on the line */
+    .timeline ul li::after {
+        content: '';
+        position: absolute;
+        height: 2rem;
+        width: 2rem;
+        background-color: var(--timeline-bg);
+        border-radius: 50%;
+        top: 0;
+    }
+
+    .timeline ul li:nth-child(odd)::after,
+    .timeline ul li:nth-child(even)::after {
+        top: 0;        
+        transform: translate(50%, 50%);
+    }
+
+    .timeline ul li:nth-child(odd)::after {
+        right: 0;
+        transform: translateX(3rem);
+    }
+
+    .timeline ul li:nth-child(even)::after {
+        left: 0;
+        transform: translateX(-3rem);
+    }
+
+
+    .timeline ul li:nth-child(odd):hover::after {
+        cursor: pointer;
+        background-color: var(--clr);
+    }
+
+    .timeline ul li:nth-child(even):hover::after {
+        cursor: pointer;
+        background-color: var(--clr);
+    }
+
+    .timeline ul li:nth-child(odd):hover,
+    .timeline ul li:nth-child(even):hover {
+        cursor: pointer;
+        background-color: var(--hov);
+        color:white
+    }
+
+    /* line in the middle */
+    .timeline::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        background-color: var(--timeline-bg);
+        /* positioning it in the center */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline-content .date {
+        position: absolute;
+        top: -2.5rem;
+        color: var(--hov);
+    }
+
+    .main-info {
+        clear: all;
+    }
+  
+  #img-caption {
+    font-size: 2rem;
+  }
+
+}
+

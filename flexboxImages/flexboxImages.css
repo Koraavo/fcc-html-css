@@ -1,0 +1,71 @@
+
+    /* Flexbox can be thought of as having two axes, 
+    the main axis and the cross axis. 
+    The main axis is determined by the flex-direction property. 
+    If flex-direction is set to row or row-reverse, the main axis is horizontal. 
+    If flex-direction is set to column or column-reverse, the main axis is vertical. */
+ 
+
+ 
+     /* The justify-content property determines 
+    how the items inside a flex container are positioned along the main axis, 
+    affecting their position and the space around them. */
+
+
+    /* The align-items property positions the flex content along the cross axis. 
+    In this case, with your flex-direction set to row, your cross axis would be vertical. */
+ 
+
+ 
+     /* Notice how some of your images have become distorted. 
+     This is because the images have different aspect ratios. 
+     Rather than setting each aspect ratio individually, 
+     you can use the object-fit property to determine how images should behave.
+   */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial;
+    background: #EBE7E7;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 32px;
+    background: #E0DDDD;
+  }
+  
+  #gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4px;
+  }
+  
+  /* each img in the #gallery has a width of 25% */
+  #gallery img {
+    width: 25%;
+    height: 300px;
+    object-fit: cover;
+    margin-top: 8px;
+    padding: 0 4px;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 800px) {
+    #gallery img {
+      width: 50%;
+    }
+  }
+  
+  @media (max-width:600px){
+    #gallery img {
+      width: 100%;
+    }
+  }

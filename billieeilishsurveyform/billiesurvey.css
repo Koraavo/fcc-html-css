@@ -1,0 +1,390 @@
+*, 
+*::after, 
+*::before {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0; 
+    border-radius: 3px;
+    color: var(--clr-attributes);
+    
+    
+}
+
+:root {
+
+    /* Creating custom selectors, like a global variable */
+    /* font families */
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+
+    /* font weights */
+    --fw-reg:  300;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-darkgrey: darkgrey;
+    --clr-background: rgb(100, 38, 54);
+    --clr-inputs: rgba(100, 38, 54, .25);
+    --clr-attributes: rgb(250, 236, 201);
+    /* --bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.25); */
+    --bs: 1px 1px #263238;
+    
+          
+          
+}
+
+body { 
+    background-position: center center; 
+    background-attachment: fixed;
+    background-repeat: no-repeat; background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;  
+
+    width: 85%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    max-width: 85%;
+    font-weight: 400;
+  }
+
+
+#who {
+    width: 85%;
+    margin: 1rem auto;
+    /* color: rgb(248, 227, 135); */
+    /* background-color: rgba(241, 222, 169, 0.15);
+    border-radius: 5px;
+    padding: 10px; */
+}
+
+#description {
+    font-size: 1.25em;
+}
+
+.headline-container {
+    text-align: center;
+    background-color: rgba(241, 222, 169, 0.05);
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: -1rem;
+}
+
+#survey-form {
+    width: 80vw;
+    max-width: 90%;
+    min-width: 20%;
+    margin: 0 auto;
+    padding-bottom: 2em;
+    /* text-align: center; */
+  }
+
+  fieldset {
+    border: 1px solid var(--clr-background);
+  }
+
+  .details-fieldset,
+  .text-area-fieldset,
+  .favourite-fieldset {
+      border: 1px solid var(--clr-background);
+      padding: 1rem;
+      margin: 1rem 0;
+  }
+
+  /* details section */
+
+  .input-div label {
+      text-align: right;
+  }
+  
+  .input-div div {
+      display: flex;
+      flex-basis: 20%;
+      margin: 1rem 0;
+  }
+  
+  .input-div input {
+    width: 70%;
+    margin: .25rem 0.5rem;
+    padding: .3rem;
+  }
+
+  .year-billie {
+      max-width: 30%;
+      
+  }
+
+  #textOther {
+    padding: 0.3rem;
+    margin: 0.5rem;
+  }
+
+  .input-div label {
+    margin-top: 0.5rem;
+}
+
+/* Fav section */
+
+#dropdown {
+    background-color: transparent;
+    border: none;
+
+}
+
+.favourite-fieldset {
+    min-width: 20%;
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+
+.favorite-song-fieldset {
+    min-width: 20%;
+    width: 100%;
+}
+
+.checkbox-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 1rem;
+}
+
+#dropdown {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+option {
+    margin: .5rem;
+    min-width: 20%;
+    height: 7vh;
+}
+
+/* textarea */
+.text-area-fieldset,
+.textareainput {
+    min-width: 20%;
+    width: 100%;
+}
+
+  
+
+/* No Major changes required here */
+
+.submit-button {
+    display: block;
+    margin: 10px auto;
+    padding: 0.5rem 2rem;
+    color: var(--clr-background);
+    background-color: var(--clr-attributes);
+    font-weight: 600;
+}
+
+.submit-button:hover {
+    cursor: pointer;
+}
+
+.footerText {
+    color: var(--clr-attributes);
+    text-align: center;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.details-fieldset input,
+textarea,
+#textOther {
+  background: var(--clr-inputs);
+  color: var(--clr-attributes);
+}
+
+::placeholder {
+    color: var(--clr-attributes);
+    opacity: 50%;
+}
+
+
+/* checkboxes and radio buttons */
+
+/* creating checkboxes, by first removing them completely in terms of appearance */
+.checkbox-div input[type="checkbox"],
+.radiobuttons input[type="radio"] {
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #fff; /* this is needed for iOS. Otherwise the background just becomes black. */
+}
+
+/* since all checkboxes are inside a div, div is a block element */
+.checkbox-container {
+    counter-reset: item;
+}
+
+/* since we want the labels to increment each item */
+.checkbox-div label {
+    cursor: pointer;
+    display: flex;
+    counter-increment: item;
+}
+
+/* the before label is giving the checkboxes the shape and size */
+.checkbox-div label::before {
+    content: counter(item);
+    font-weight: 600;
+    margin-right: 10px;
+    color: var(--clr-background);
+    width: 1.2em;
+    min-width: 1.2em;
+    max-height: 1.2em;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid var(--clr-background);
+    box-shadow: var(--bs);
+}
+
+
+/* select the label directly after the checkbox */
+/* do these things when we hover over it */
+/* if we focus on it using keyboard */
+.checkbox-div label:hover::before,
+.checkbox-div input[type="checkbox"]:hover + label::before,
+.checkbox-div input[type="checkbox"]:focus + label::before {
+    background-color: var(--clr-attributes);
+    width: 1.2em;
+    display: inline-block;
+    border: 1px solid var(--clr-background);
+    box-shadow: none;
+}
+
+/* when we click it */
+.checkbox-div input[type="checkbox"]:checked + label::before {
+    content: '\002714';
+    background-color: var(--clr-attributes);
+    color: var(--clr-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.radiobuttons label {
+    cursor: pointer;
+}
+
+/* creating checkboxes, by first removing them completely in terms of appearance */
+
+/* the before label is giving the checkboxes the shape and size */
+.radiobuttons label::before {
+    content: '\002714';
+    font-size: 12px;
+    color: transparent;
+    font-weight: 600;
+    margin-right: 10px;
+    text-align: center;
+    border: 1px solid var(--clr-background);
+    box-shadow: var(--bs);
+    border-radius: 50%;
+    padding: 2px;
+}
+
+
+/* select the label directly after the checkbox */
+/* do these things when we hover over it */
+/* if we focus it using keyboard */
+.radiobuttons label:hover::before,
+.radiobuttons input[type="radio"]:hover + label::before,
+.radiobuttons input[type="radio"]:focus + label::before,
+.radiobuttons input[type="radio"]:checked + label::before {
+    content: '\002714';
+    color: var(--clr-background);
+    background-color: var(--clr-attributes);
+    text-align: center;
+    box-shadow: none;
+}
+
+@media screen and (max-width: 480px){
+    body { 
+      background: linear-gradient(rgba(255, 254, 254, 0.2), rgba(247, 247, 244, 0.2)), 
+      url('https://i.ibb.co/G7gD4NX/billie400-900.jpg') no-repeat fixed; 
+      font-size: smaller;
+      width: 95%;
+    }
+
+    ::placeholder {
+        font-size: 12px;
+    }
+
+    .favourite-fieldset {
+        flex-direction: column;
+        
+    }
+
+    .checkbox-container {
+        grid-template-columns: 1fr;
+    }
+
+    option {
+        text-align: start;
+    }
+
+    #dropdown {
+        padding: .1rem;
+    }
+
+    .year-billie {
+        max-width: 100%;
+        
+    }
+    
+  }
+
+@media screen and (min-width: 481px) and (max-width: 900px) {
+    body {
+        background: linear-gradient(rgba(255, 254, 254, 0.2), rgba(247, 247, 244, 0.2)), 
+        url('https://i.ibb.co/m0wh8w4/billie-640jpeg.jpg') no-repeat fixed; 
+        background-size: cover;
+    }
+
+    body { 
+        background: linear-gradient(rgba(255, 254, 254, 0.2), rgba(247, 247, 244, 0.2)), 
+        url('https://i.ibb.co/G7gD4NX/billie400-900.jpg') no-repeat fixed; 
+        background-size: cover;
+      }
+
+      .favourite-fieldset {
+        flex-direction: column;
+        
+    }
+
+    .checkbox-container {
+        grid-template-columns: 1fr;
+    }
+
+    option {
+        text-align: start;
+    }
+
+  }
+
+  @media screen and (min-width: 901px) {
+    
+    body { 
+        background: linear-gradient(rgba(77, 49, 49, 0.2), rgba(165, 165, 144, 0.2)), 
+        url('https://i.ibb.co/G7gD4NX/billie400-900.jpg') no-repeat fixed; 
+        background-size: cover;
+    }
+
+    body {
+        background: 
+        linear-gradient(rgba(255, 254, 254, 0.2), rgba(247, 247, 244, 0.2)), 
+        url('https://i.ibb.co/5kzt8qs/billie1280.jpg') no-repeat  fixed; 
+        background-size: cover;
+    }
+
+  }
+
+  
