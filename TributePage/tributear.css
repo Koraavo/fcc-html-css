@@ -109,21 +109,25 @@ a:hover {
     top: .5rem;
 }
 
-.menu-btn:checked ~ .menu{
+.menu-btn:checked ~ .menu,
+.menu-btn:focus ~ .menu{
     display: block;
     max-height: 25rem;
 }
 
-.menu-btn:checked ~ .menu-icon .nav-icon{
+.menu-btn:checked ~ .menu-icon .nav-icon,
+.menu-btn:focus ~ .menu-icon .nav-icon{
     background: transparent;
 }
 
-.menu-btn:checked ~ .menu-icon .nav-icon::before{
+.menu-btn:checked ~ .menu-icon .nav-icon::before,
+.menu-btn:focus ~ .menu-icon .nav-icon::before{
     transform: rotate(45deg);
     top: 0;
 }
 
-.menu-btn:checked ~ .menu-icon .nav-icon::after{
+.menu-btn:checked ~ .menu-icon .nav-icon::after,
+.menu-btn:focus ~ .menu-icon .nav-icon::after{
     transform: rotate(-45deg);
     top: 0;
 }

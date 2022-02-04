@@ -1,0 +1,231 @@
+html, body 
+{ background-color: #80CBC4;
+  min-width: 300px;
+  text-align: center;
+  font-family: 'Raleway', Helvetica, sans-serif;
+}
+
+
+/* header
+{ 
+  margin: 10px auto;
+  font-size: 1em;
+  font-weight: bold;
+} */
+
+/* */
+kbd
+{ font-size: 1em;
+  border: .5px solid grey;
+  border-radius: 2px;
+  box-shadow: 1px 1px #263238;
+  padding: 1px;
+  background-color: lightGrey;
+}
+code
+{ font-size: 1em;
+  border: .5px solid black;
+  border-radius: 2px;
+  padding: 1px;
+  background-color: #00838F;
+  color: white;
+}
+.checklist
+{ border: .5px solid black;
+  border-radius: 1px;
+  background-color: white;
+  width: 50%;
+  max-width: 800px;
+  margin: 10px auto;
+  padding: 0px 10px 15px 25px; 
+}
+
+.header,
+#form-outer
+{ border: .5px solid black;
+  border-radius: 1px;
+  background-color: white;
+  width: 75%;
+  max-width: 800px;
+  margin: 10px auto;
+  padding: 10px; 
+}
+
+#form-outer
+{ 
+  width: 90%;
+  padding: 20px 2px 0px 0px;
+}
+
+/* LEFT COLUMN */
+.labels 
+{ display: inline-block;
+  width: 20%;
+  text-align: left;
+  vertical-align: top;
+  padding: 5px;
+  margin: 5px;
+  border: 0px solid black;
+}
+/* RIGHT COLUMN */
+.rightTab 
+{ display: inline-block;
+  border: 0px solid black;
+  width: 60%;
+  text-align: left;
+  vertical-align: center;
+}
+.input-field 
+{ display: inline;
+  border: .5px solid black;
+  border-radius: 2px;
+  height: 20px;
+  width: 80%;
+  padding: 10px;
+  margin: 10px;
+}
+.input-field:hover
+{ border: .5px solid #0097A7;
+  
+}
+.dropdown 
+{ display: inline-block;
+  height: 45px;
+  width: 85%;
+  padding: 10px;
+  margin: 10px;  
+  border: .5px solid black;
+  border-radius: 2px;
+}
+.dropdown option:hover
+{ display: block;
+  
+}
+
+/* Button: Radio Container*/
+.radio  
+{ display: block;
+  position: relative;
+  left: -43px;
+  margin: auto;
+  padding: 10px;
+}
+/* Button: Radio Postion */
+.userRatings
+{ float: left;
+  margin-right: 5px;
+}
+
+/* HIDE DEFAULT CHECKLIST */
+.container input 
+{ position: relative;
+  opacity: 0;
+}
+/* CHECKLIST STYLE*/
+/* Checkbox: Labels */
+.container 
+{ cursor: pointer;  
+  display: inline-block;
+  position: relative;
+  padding-left: 45px;
+  margin-top: 5px;
+  text-align: left;
+  width: 90%;
+    
+}
+/* Checkbox: Style */
+.checkmark 
+{ display: block;
+  vertical-align: center;
+  position: absolute;
+  border: .5px solid #000;
+  border-radius: 2px; 
+  box-shadow: 1px 1px #888888;
+  background-color: #fff;
+  top: 2.5px;
+  left: 20px;
+  width: 15px;
+  height: 15px;
+  font-size:.75em;
+
+}
+
+/* Checkbox: Hover Style */
+.container:hover input ~ .checkmark 
+  { box-shadow: 1px 1px #fff;
+    color: white;
+  }
+/* Checkmark: Create & Style */
+.container .checkmark:after 
+{ color: white;
+  top: -4px;
+  left: 5px;
+  bottom: 0px;
+  width: 5px;
+  height: 15px;
+  border: 2px solid black;
+  border-width: 0 2px 2px 0;
+  padding-bottom: -2px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* Checkmark: Check When Clicked */
+.checkmark:after 
+{ content: "";
+  position: absolute;
+  display: none;
+}
+/* Checkmark: Display Check When Clicked*/
+.container input:checked ~ 
+.checkmark:after 
+{ display: inline-block;
+}
+/*Submit Form*/
+#submit 
+{ background-color: #0097A7;
+  border-radius: 4px;
+  color: white;
+  font-size: 1em;
+  height: 40px;
+  width: 100px;
+  margin: 10px;
+  border: .5px solid black;
+  box-shadow: 2px 2px #888888;
+}
+/*Responsive Design*/
+@media screen and (max-width: 833px) 
+{ .input-field 
+  { width: 80%; }
+  select 
+  { width: 90%; }
+ 
+}
+@media screen and (max-width: 520px) 
+{ .labels 
+  { display: inline-block;
+    float: left;
+    margin: 5px auto;
+    width: 80%;
+    text-align: left;
+    padding-bottom: 1px;
+  }
+  .rightTab 
+  { display: inline-block;
+    margin: 5px auto;
+    padding: 0px;
+    width: 80%;
+    text-align: left;
+  }
+  .input-field
+  { display: inline-block;
+    float: center;
+    width: 90%;
+    margin: 0px auto;
+    text-align: left;
+  }
+  select 
+  { width: 80%;
+  }
+
+}
