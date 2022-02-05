@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIT CHEAT</title>
+    <link rel="stylesheet" href="./techdoc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" /> 
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="mainhead">
+        <header class="main-title">GIT IT!</header>
+    </div>
+    <nav id="navbar">
+        <header>LET'S GIT THIS</header>
+        <ul>
+            <li><a href="#What_is_git?" class="nav-link">What is git?</a></li>
+            <li><a href="#Installing_Git" class="nav-link">Installing Git</a></li>
+            <li><a href="#Initial_globals_config" class="nav-link">Initial globals config</a></li>
+            <li><a href="#Getting_Git_Repository" class="nav-link">Getting Git Repository</a></li>
+            <li><a href="#Checking_Files_Status" class="nav-link">Checking Files Status</a></li>
+            <li><a href="#Gitignore" class="nav-link">Gitignore</a></li>
+            <li><a href="#Adding_changes" class="nav-link">Adding changes</a></li>
+            <li><a href="#Committing_changes" class="nav-link">Committing changes</a></li>
+            <li><a href="#Skipping_Staging_Area" class="nav-link">Skipping Staging Area</a></li>
+            <li><a href="#Removing_Files" class="nav-link">Removing Files</a></li>
+            <li><a href="#List_Version_History" class="nav-link">List Version History</a></li>
+            <li><a href="#Committing_changes" class="nav-link">Committing changes</a></li>
+            <li><a href="#Committing_changes" class="nav-link">Committing changes</a></li>
+            <li><a href="#Committing_changes" class="nav-link">Committing changes</a></li>
+            
+
+        </ul>
+    </nav>
+
+
+    <main id="main-doc">
+        <section class="main-section" id="What_is_git?">
+            <header>What is git?</header>
+            <article>
+                <p>
+                    Git is a version-control system for tracking changes in computer files and
+                    coordinating work on those files among multiple people.
+                    Git is a Distributed Version Control System. So Git does not necessarily
+                    rely on a central server to store all the versions of a project’s files.
+                    Instead, every user “clones” a copy of a repository (a collection of files)
+                    and has the full history of the project on their own hard drive.
+                    This clone has all of the metadata of the original while the original
+                    itself is stored on a self-hosted server or a third party hosting service like GitHub.
+                </p>
+
+                <p>
+                    The major difference between Git and any other VCS (Subversion and friends included)
+                    is the way Git thinks about its data.
+                    Git thinks of its data more like a series of snapshots of a miniature filesystem.
+                    With Git, every time you commit, or save the state of your project,
+                    Git basically takes a picture of what all your files look like at that moment
+                    and stores a reference to that snapshot. To be efficient, if files have not changed,
+                    Git doesn’t store the file again, just a link to the previous identical file it has already stored.
+                    Git thinks about its data more like a <strong>stream of snapshots.</strong></p>
+                <p>
+                    This makes Git more like a mini filesystem with some incredibly powerful tools built on top of it,
+                    rather than simply a VCS.
+                </p>
+
+                <p>
+                    Git also helps you synchronise code between multiple people.
+                    So imagine you and your friend are collaborating on a project.
+                    You both are working on the same project files.
+                    Now Git takes those changes you and your friend made independently and merges them to a single
+                    “Master” repository. So by using Git you can ensure
+                    you both are working on the most recent version of the repository.
+                    So you don’t have to worry about mailing your files to each other and
+                    working with a ridiculous number of copies of the original file.
+                    And collaborating long distance becomes as easy as HTML.
+                </p>
+
+
+                <h3>The Three Stages</h3>
+                <p>
+                    Git has three main states that your files can reside in: <strong> modified, staged, and
+                        committed</strong>
+                </p>
+                <ul>
+                    <li>Modified means that you have changed the file but have not committed it to your database yet.
+                    </li>
+                    <li>Staged means that you have marked a modified file in its current version to go into your next
+                        commit snapshot.</li>
+                    <li>Committed means that the data is safely stored in your local database.</li>
+                </ul>
+            </article>
+
+            <section class="main-section" id="Installing_Git">
+                <header>Installing Git</header>
+                <article>
+                    <h2>Mac OS</h2>
+                    <h3>Check Git installation using</h3>
+                    <code>$ git --version</code>
+                    <p>You will be prompted to install git, if it is not installed</p>
+                    <h3>Using Homebrew</h3>
+                    <ul>
+                        <li>Install Homebrew using the following command</li>
+                        <code>$ 
+                    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+                </code>
+                        <li>Update Homebrew</li>
+                        <code>$ brew update</code>
+                        <li>Install Git</li>
+                        <code>$ brew install git</code>
+                    </ul>
+
+                    <h2>Windows</h2>
+                    <ul>
+                        <li>Navigate to Git's Website
+                            <a href="https://git-scm.com/download/win">Download Page</a>
+                        </li>
+                        <li>Double click on a recent version of Git to download Git for Windows.</li>
+                        <li>Follow instructions to install git</li>
+                    </ul>
+                    <h2>Ubunto or Debian</h2>
+                    <p>Run the following command to update and then install git</p>
+                    <code>$ sudo apt update</code> <br>
+                    <code>$ sudo apt install git</code>
+                </article>
+            </section>
+
+            <section class="main-section" id="Initial_globals_config">
+                <header>Initial globals config</header>
+                <article>
+                    <p>You can view all of your settings and where they are coming from using:</p>
+                    <code>$ git config --list --show-origin</code>
+                    <h2>Your Identity</h2>
+                    <p>
+                        The first thing you should do when you install Git is to set your user name and email address.
+                        This is important because every Git commit uses this information, and it’s immutably baked into
+                        the commits you start creating:
+                    </p>
+                    <code>$ git config --global user.name "John Doe"</code> <br>
+                    <code>$ git config --global user.email johndoe@example.com</code>
+
+                    <p>
+                        If you ever need help while using Git, there are three equivalent ways to get the comprehensive
+                        manual page (manpage) help for any of the Git commands:
+                    </p>
+                    <code>$ git help &lt;verb&gt; </code> <br>
+                    <code>$ git &lt;verb&gt; --help </code> <br>
+                    <code>$ man git- &lt;verb&gt; </code> <br>
+                </article>
+            </section>
+            <section class="main-section" id="Getting_Git_Repository">
+                <header>Getting Git Repository</header>
+                <article>
+                    <p>You typically obtain a Git repository in one of two ways:</p>
+                    <ul>
+                        <li>
+                            <h2>Initializing a Git Repository</h2>
+                        </li>
+
+                        <ul>
+                            <li>
+                                open up a terminal and move to where you want to place the project on your local machine
+                                using <em> the cd (change directory) </em> command
+                            </li>
+                            <code>$ cd path_to_the_folder</code>
+                            <li>To initialize a git repository in the root of the folder, run the git init command</li>
+                            <code>$ git init</code>
+                        </ul>
+                        <li>
+                            <h2>Clone a Repository</h2>
+                        </li>
+                        <code>$ git clone [url]</code>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="main-section" id="Checking_Files_Status">
+                <header>Checking Files Status</header>
+                <article>
+                    <p>
+                        The main tool you use to determine which files are in which state is the git status command. If
+                        you run this command directly after a clone, you should see something like this:
+                    </p>
+                    <code>$ git status <br>
+                On branch master <br>
+                Your branch is up-to-date with 'origin/master'. <br>
+                nothing to commit, working tree clean</code>
+
+                    <p>
+                        This means you have a clean working directory; in other words, none of your tracked files are
+                        modified.
+                    </p>
+                </article>
+            </section>
+
+            <section class="main-section" id="Gitignore">
+                <header>Gitignore</header>
+                <article>
+                    <p>
+                        Often, you’ll have a class of files that you don’t want Git to automatically add or even show
+                        you as being untracked.
+                        For such cases, we create a gitignore file.
+
+                        Here are a few <a href="https://github.com/github/gitignore">templates</a> for .gitignore files.
+                    </p>
+                    <code>
+                # ignore all .a files <br>
+                *.a <br>
+
+                # but do track lib.a, even though you're ignoring .a files above <br>
+                !lib.a <br>
+
+                # only ignore the TODO file in the current directory, not subdir/TODO <br>
+                /TODO <br>
+
+                # ignore all files in any directory named build <br>
+                build/ <br>
+
+                # ignore doc/notes.txt, but not doc/server/arch.txt <br>
+                doc/*.txt <br>
+
+                # ignore all .pdf files in the doc/ directory and any of its subdirectories <br>
+                doc/**/*.pdf 
+            </code>
+                    
+                </article>
+            </section>
+
+            <section class="main-section" id="Adding_changes">
+                <header>Adding changes</header>
+                <article>
+                    <p> If you want to start version-controlling existing files
+                        (as opposed to an empty directory), you should probably begin tracking
+                        those files and do an initial commit. You can accomplish that with a
+                        few git add commands that specify the files you want to track,
+                        followed by a git commit:
+                    </p>
+                    <code>$ git add *.c</code> <br>
+                    <code>$ git add LICENSE</code> <br>
+                </article>
+            </section>
+
+            <section class="main-section" id="Committing_changes">
+                <header>Committing Changes</header>
+                <article>
+                    <p>
+                        Now that your staging area is set up the way you want it, you can commit your changes.
+                        Remember that anything that is still unstaged — any files you have created or modified that you
+                        haven’t run git add on since you edited them — 
+                        won’t go into this commit.
+                    </p>
+                    <p>This will commit the files added with the message </p>
+                    <code>
+                    $ git commit -m "Story 182: fix font for h1" <br>
+                    [master 463dc4f] Story 182: fix font for h1 <br>
+                    2 files changed, 2 insertions(+) <br>
+                    create mode 100644 README
+                </code>
+                </article>
+            </section>
+
+            <section class="main-section" id="Skipping_Staging_Area">
+                <header>Skipping Staging Area</header>
+                <article>
+                    <p>
+                        Although it can be amazingly useful for crafting commits exactly how you want them,
+                        the staging area is sometimes a bit more complex than you need in your workflow.
+                        If you want to skip the staging area, Git provides a simple shortcut.
+                        Adding the -a option to the git commit command makes Git automatically
+                        stage every file that is already tracked before doing the commit,
+                        letting you skip the git add part
+                    </p>
+                    <code>
+                    $ git commit -a -m 'Add new benchmarks' <br>
+                    [master 83e38c7] Add new benchmarks <br>
+                    1 file changed, 5 insertions(+), 0 deletions(-)
+                </code>
+                </article>
+            </section>
+
+            <section class="main-section" id="Removing_Files">
+                <header>Removing Files</header>
+                <article>
+
+                    <p>
+                        To remove a file from Git, you have to remove it from your tracked files (more accurately,
+                        remove it from your staging area) and then commit.
+                    </p>
+                    <ul>
+                        <li>
+                            To remove a file both from the Git repository and the filesystem, you can use git rm without
+                            any parameters (except for the file's name, of course):
+                        </li>
+                        <code>$ git rm file1.txt</code>
+                        <li>If you only want to remove the file from the repository, but keep it on the filesystem, you
+                            can add the --cached flag:</li>
+                        <code>$ git rm file2.txt --cached</code>
+                        <li>
+                            When trying to delete multiple files in a directory or via a glob pattern, you might want to
+                            perform a "dry-run" first and see which files would be removed:
+                        </li>
+                        <code>
+                        $ git rm css/* --dry-run <br>
+                        rm 'css/about.css' <br>
+                        rm 'css/general.css' <br>
+                    </code>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="main-section" id="List_Version_History">
+                <header>List Version History</header>
+                <article>
+                    <p>
+                        Lists version history for the current branch in reverse chronological order
+                    </p>
+                    <code>
+                    $ git log
+                </code>
+
+                <p>
+                    To see what you’ve changed but not yet staged, type git diff with no other arguments:
+                </p>
+                <code>$ git diff</code>
+
+                <p>
+                    One of the more helpful options is -p or --patch, which shows the difference (the patch output) introduced in each commit. You can also limit the number of log entries displayed, such as using -2 to show only the last two entries.
+                </p>
+
+                <code>$ git log -p -2</code>
+                </article>
+            </section>
+    </main>
+
+</body>
+
+</html>
