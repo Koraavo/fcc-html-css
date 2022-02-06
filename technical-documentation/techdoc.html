@@ -293,11 +293,11 @@
                     </p>
                     <ul>
                         <li>
-                            To remove a file both from the Git repository and the filesystem, you can use git rm without
+                            To remove a file <strong> both from the Git repository and the filesystem </strong>, you can use git rm without
                             any parameters (except for the file's name, of course):
                         </li>
                         <code>$ git rm file1.txt</code>
-                        <li>If you only want to remove the file from the repository, but keep it on the filesystem, you
+                        <li>If you only want to <strong> remove the file from the repository, but keep it on the filesystem </strong>, you
                             can add the --cached flag:</li>
                         <code>$ git rm -r --cached myFolder</code>
                         <li>
@@ -341,11 +341,11 @@
                 <header>Remotes</header>
                 <article>
                     <p>
-                        When you have your project at a point that you want to share, you have to push it upstream. 
+                        When you have your project at a point that you want to share, and add it to your repository on github, you have to push it upstream. 
                         The command for this is simple
                     </p>
                     <code>$ git push origin main</code>
-                <p>If you want to see more information about a particular remote, you can use</p>
+                <p>If you want to <strong> see more information </strong> about a particular remote, you can use</p>
                 <code>$ git remote show origin <br>
                     * remote origin <br>
                     Fetch URL: https://github.com/schacon/ticgit <br>
@@ -360,7 +360,7 @@
                     main pushes to main (up to date)
                 </code>
                 <p>
-                    You can run git remote rename to change a remote’s shortname. For instance, if you want to rename pb to paul, you can do so with git remote rename:
+                    You can run git remote rename to <strong> change a remote’s shortname </strong>. For instance, if you want to rename pb to paul, you can do so with git remote rename:
                 </p>
 
                 <code>$ git remote rename pb paul</code> <br>
@@ -368,7 +368,7 @@
                     origin <br>
                     paul </code>
 
-                    <p>If you want to remove a remote for some reason</p>
+                    <p>If you want to <strong> remove a remote </strong>for some reason</p>
                     <code>$ git remote remove paul</code> <br>
                     <code>$ git remote <br>
                         origin </code>
@@ -382,7 +382,8 @@
                         Say you want to make a new feature but are worried about making changes to the main project while developing the feature. This is where git branches come in. 
                     </p>
 
-                    <p>What happens when you create a new branch? Well, doing so creates a new pointer for you to move around. Let’s say you want to create a new branch called testing. You do this with the git branch command:</p>
+                    <p>What happens when you create a new branch? Well, doing so creates a new pointer for you to move around. 
+                        Let’s say you want to create a new branch called testing. You do this with the git branch command:</p>
 
                     <code>$ git branch testing</code>
 
@@ -401,10 +402,10 @@
                         dee714c FreecodeCampProjects
                     </code>
 
-                    <p>To switch to an existing branch, you run the git checkout command. Let’s switch to the new testing branch:</p>
+                    <p>To <strong> switch to an existing branch </strong>, you run the git checkout command. Let’s switch to the new testing branch:</p>
                     <code>$ git checkout testing</code>
                     <p>
-                        To create a new branch and switch to it at the same time, you can run the git checkout command with the -b switch
+                        To <strong> create a new branch and switch to it at the same time </strong>, you can run the git checkout command with the -b switch
                     </p>
                     <code>
                         $ git checkout -b iss53 <br>
@@ -413,11 +414,11 @@
 
                     <p>You shall see that your testing branch has moved forward but the main is still pointing to the previous commit</p>
 
-                    <p>If you want to merge changes in SubBranch to MainBranch</p>
+                    <p>If you want to <strong> merge changes in SubBranch to MainBranch </strong> </p>
                     <code>$ git checkout MainBranch</code> <br>
                     <code>$ git merge SubBranch</code>
 
-                    <p>If you just want to view all your branches</p>
+                    <p>If you just want to <strong> view all your branches </strong></p>
                     <code>
                         $ git branch <br>
                         * main <br>
@@ -428,7 +429,7 @@
                     </p>
                     <code> git branch -v</code>
 
-                    <p>To delete the local branch use one of the following:</p>
+                    <p>To <strong> delete the local branch </strong> use one of the following:</p>
                     <code>$ git branch -d branch_name</code> <br>
                     <code>$ git branch -D branch_name</code>
 
