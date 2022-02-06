@@ -11,8 +11,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
         integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
     <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Acme&family=Cookie&family=Quintessential&family=Roboto+Condensed:wght@300;400;700&display=swap"
         rel="stylesheet">
+
+
+
 </head>
 
 <body>
@@ -102,12 +108,12 @@
                 <article>
                     <ul>
                         <li>
-                            Mac OS
+                            <span class="boldlist"> Mac OS </span>
                             <ul>
                                 <li>Checking Git version</li>
                                 <ul>
-                                    <li>Check Git installation using <br></li>
-                                    <code>$ git --version</code> <br>
+                                    <li>Check Git installation using </li>
+                                    <code>$ git --version</code>
                                     <li>You will be prompted to install git, if it is not installed</li>
                                 </ul>
                             </ul>
@@ -115,9 +121,7 @@
                                 <li>Using Homebrew</li>
                                 <ul>
                                     <li>Install Homebrew using the following command</li>
-                                    <code>$ 
-                                            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-                                            </code>
+                                    <code>$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"</code>
                                     <li>Update Homebrew</li>
                                     <code>$ brew update</code>
                                     <li>Install Git</li>
@@ -126,7 +130,8 @@
                             </ul>
                         </li>
                         <li>
-                            Windows
+                            <span class="boldlist"> Windows</span>
+
                             <ul>
                                 <li>Navigate to Git's Website
                                     <a href="https://git-scm.com/download/win">Download Page</a>
@@ -136,15 +141,16 @@
                             </ul>
                         </li>
                         <li>
-                            Debian/Ubuntu
+                            <span class="boldlist"> Debian/Ubuntu</span>
+
                             <ul>
                                 <li>Run the following command to update and then install git</li>
-                                <code>$ sudo apt update</code> <br>
+                                <code>$ sudo apt update</code>
                                 <code>$ sudo apt install git</code>
                             </ul>
                         </li>
                     </ul>
-                        
+
                 </article>
             </section>
 
@@ -152,24 +158,34 @@
                 <header>Initial globals config</header>
                 <article>
                     <p>You can view all of your settings and where they are coming from using:</p>
-                    <code>$ git config --list --show-origin</code> 
-                    
-                    <h3>Your Identity</h3>
-                    <p>
-                        The first thing you should do when you install Git is to set your user name and email address.
-                        This is important because every Git commit uses this information, and it’s immutably baked into
-                        the commits you start creating:
-                    </p>
-                    <code>$ git config --global user.name "John Doe"</code> <br>
-                    <code>$ git config --global user.email johndoe@example.com</code>
+                    <code>$ git config --list --show-origin</code>
 
-                    <p>
-                        If you ever need help while using Git, there are three equivalent ways to get the comprehensive
-                        manual page (manpage) help for any of the Git commands:
-                    </p>
-                    <code>$ git help &lt;verb&gt; </code> <br>
-                    <code>$ git &lt;verb&gt; --help </code> <br>
-                    <code>$ man git- &lt;verb&gt; </code> <br>
+                    <ul>
+                        <li>
+                            <span class="boldlist"> Your Identity </span>
+                            <p>
+                                The first thing you should do when you install Git is to set your user name and email
+                                address.
+                                This is important because every Git commit uses this information, and it’s immutably
+                                baked into
+                                the commits you start creating:
+                            </p>
+                            <code>$ git config --global user.name "John Doe"</code>
+                            <code>$ git config --global user.email johndoe@example.com</code>
+                        </li>
+                        <li>
+                            <span class="boldlist"> Getting Help </span>
+                            <p>
+                                If you ever need help while using Git, there are three equivalent ways to get the
+                                comprehensive
+                                manual page (manpage) help for any of the Git commands:
+                            </p>
+                            <code>$ git help &lt;verb&gt; </code>
+                            <code>$ git &lt;verb&gt; --help </code>
+                            <code>$ man git- &lt;verb&gt; </code>
+                        </li>
+                    </ul>
+
                 </article>
             </section>
             <section class="main-section" id="Getting_Git_Repository">
@@ -179,7 +195,7 @@
 
                     <ul>
                         <li>
-                            Initializing a Git Repository
+                            <span class="boldlist">Initializing a Git Repository</span>
                         </li>
 
                         <ul>
@@ -192,7 +208,8 @@
                             <code>$ git init</code>
                         </ul>
                         <li>
-                            Clone a Repository
+                            <span class="boldlist"> Clone a Repository </span>
+
                         </li>
                         <code>$ git clone [url]</code>
                     </ul>
@@ -206,10 +223,10 @@
                         The main tool you use to determine which files are in which state is the git status command. If
                         you run this command directly after a clone, you should see something like this:
                     </p>
-                    <code>$ git status <br>
-                On branch master <br>
-                Your branch is up-to-date with 'origin/master'. <br>
-                nothing to commit, working tree clean</code>
+                    <code>$ git status 
+On branch main
+Your branch is up-to-date with 'origin/main'. 
+nothing to commit, working tree clean</code>
 
                     <p>
                         This means you have a clean working directory; in other words, none of your tracked files are
@@ -233,16 +250,16 @@
                     <code>*.a </code>
 
                     <p class="ignoreinfo"># but do track lib.a, even though you're ignoring .a files above </p>
-                    <code>!lib.a</code> <br>
+                    <code>!lib.a</code>
                     <p class="ignoreinfo">
                         # only ignore the TODO file in the current directory, not subdir/TODO
                     </p>
-                    <code> /TODO </code> <br>
+                    <code> /TODO </code>
 
                     <p class="ignoreinfo"> # ignore all files in any directory named build </p>
-                    <code>build/</code> <br>
+                    <code>build/</code>
                     <p class="ignoreinfo"> # ignore doc/notes.txt, but not doc/server/arch.txt </p>
-                    <code>doc/*.txt </code> <br>
+                    <code>doc/*.txt </code>
                     <p class="ignoreinfo">
                         # ignore all .pdf files in the doc/ directory and any of its subdirectories </p>
                     <code>doc/**/*.pdf </code>
@@ -259,8 +276,8 @@
                         few git add commands that specify the files you want to track,
                         followed by a git commit:
                     </p>
-                    <code>$ git add *.c</code> <br>
-                    <code>$ git add LICENSE</code> <br>
+                    <code>$ git add *.c</code>
+                    <code>$ git add LICENSE</code>
                 </article>
             </section>
 
@@ -274,12 +291,10 @@
                         won’t go into this commit.
                     </p>
                     <p>This will commit the files added with the message </p>
-                    <code>
-                    $ git commit -m "Story 182: fix font for h1" <br>
-                    [master 463dc4f] Story 182: fix font for h1 <br>
-                    2 files changed, 2 insertions(+) <br>
-                    create mode 100644 README
-                </code>
+                    <code>$ git commit -m "Story 182: fix font for h1" 
+[master 463dc4f] Story 182: fix font for h1 
+2 files changed, 2 insertions(+) 
+create mode 100644 README</code>
                 </article>
             </section>
 
@@ -294,11 +309,9 @@
                         stage every file that is already tracked before doing the commit,
                         letting you skip the git add part
                     </p>
-                    <code>
-                    $ git commit -a -m 'Add new benchmarks' <br>
-                    [master 83e38c7] Add new benchmarks <br>
-                    1 file changed, 5 insertions(+), 0 deletions(-)
-                </code>
+                    <code>$ git commit -a -m 'Add new benchmarks' 
+[master 83e38c7] Add new benchmarks 
+1 file changed, 5 insertions(+), 0 deletions(-)</code>
                 </article>
             </section>
 
@@ -325,11 +338,9 @@
                             When trying to delete multiple files in a directory or via a glob pattern, you might want to
                             perform a "dry-run" first and see which files would be removed:
                         </li>
-                        <code>
-                        $ git rm css/* --dry-run <br>
-                        rm 'css/about.css' <br>
-                        rm 'css/general.css' <br>
-                    </code>
+                        <code>$ git rm css/* --dry-run 
+rm 'css/about.css' 
+rm 'css/general.css'</code>
                     </ul>
                 </article>
             </section>
@@ -340,9 +351,7 @@
                     <p>
                         Lists version history for the current branch in reverse chronological order
                     </p>
-                    <code>
-                    $ git log
-                </code>
+                    <code>$ git log</code>
 
                     <p>
                         To see what you’ve changed but not yet staged, type git diff with no other arguments:
@@ -371,35 +380,34 @@
                     <ul>
                         <li>
                             If you want to <strong> see more information </strong> about a particular remote, you can
-                            use <br>
-                            <code>$ git remote show origin <br>
-                                * remote origin <br>
-                                Fetch URL: https://github.com/schacon/ticgit <br>
-                                Push  URL: https://github.com/schacon/ticgit <br>
-                                HEAD branch: main <br>
-                                Remote branches: <br>
-                                main tracked <br>
-                                dev-branch tracked <br>
-                                Local branch configured for 'git pull': <br>
-                                main merges with remote master <br>
-                                Local ref configured for 'git push': <br>
-                                main pushes to main (up to date)
-                            </code>
+                            use
+                            <code>$ git remote show origin 
+* remote origin 
+Fetch URL: https://github.com/schacon/ticgit 
+Push  URL: https://github.com/schacon/ticgit 
+HEAD branch: main 
+Remote branches: 
+main tracked 
+dev-branch tracked 
+Local branch configured for 'git pull': 
+main merges with remote master 
+Local ref configured for 'git push': 
+main pushes to main (up to date)</code>
                         </li>
                         <li>
                             You can run git remote rename to <strong> change a remote’s shortname </strong>. For
                             instance,
-                            if you want to rename pb to paul, you can do so with git remote rename: <br>
-                            <code>$ git remote rename pb paul</code> <br>
-                            <code>$ git remote <br>
-                            origin <br>
-                            paul </code>
+                            if you want to rename pb to paul, you can do so with git remote rename:
+                            <code>$ git remote rename pb paul</code>
+                            <code>$ git remote 
+origin 
+paul </code>
                         </li>
                         <li>
-                            If you want to <strong> remove a remote </strong>for some reason <br>
-                            <code>$ git remote remove paul</code> <br>
-                            <code>$ git remote <br>
-                                origin </code>
+                            If you want to <strong> remove a remote </strong>for some reason
+                            <code>$ git remote remove paul</code>
+                            <code>$ git remote 
+origin </code>
 
                         </li>
                     </ul>
@@ -428,59 +436,54 @@
                     </p>
                     <p>You can easily see this by running a simple git log command that shows you where the branch
                         pointers are pointing. This option is called --decorate.</p>
-                    <code>$ git log --oneline --decorate <br>
-                        0fb4f64 (HEAD -> main, origin/main, testing) removed otherpeople dir<br>
-                        d661693 changes to regform and first version of techdoc <br>
-                        571b3d5 changes to regform and first version of techdoc <br>
-                        a94d55b ignore file <br>
-                        015bbc4 ignore updated <br>
-                        deeb8a2 edits in tribute page for accessibility <br>
-                        dee714c FreecodeCampProjects
-                    </code>
+                    <code>$ git log --oneline --decorate 
+0fb4f64 (HEAD -> main, origin/main, testing) removed otherpeople dir
+d661693 changes to regform and first version of techdoc
+571b3d5 changes to regform and first version of techdoc 
+a94d55b ignore file 
+015bbc4 ignore updated 
+deeb8a2 edits in tribute page for accessibility 
+dee714c FreecodeCampProjects</code>
 
                     <ul>
                         <li>
                             To <strong> switch to an existing branch </strong>, you run the git checkout command.
-                            Let’s switch to the new testing branch: <br>
+                            Let’s switch to the new testing branch:
                             <code>$ git checkout testing</code>
                         </li>
                         <li>
                             To <strong> create a new branch and switch to it at the same time </strong>, you can run
-                            the git checkout command with the -b switch <br>
-                            <code>
-                                $ git checkout -b iss53 <br>
-                                Switched to a new branch "iss53"
-                            </code>
+                            the git checkout command with the -b switch
+                            <code>$ git checkout -b iss53 
+Switched to a new branch "iss53"</code>
                             <p>You shall see that your testing branch has moved forward but the main is still pointing
                                 to the previous commit</p>
                         </li>
                         <li>
-                            If you want to <strong> merge changes in SubBranch to MainBranch </strong> <br>
-                            <code>$ git checkout MainBranch</code> <br>
+                            If you want to <strong> merge changes in SubBranch to MainBranch </strong>
+                            <code>$ git checkout MainBranch</code>
                             <code>$ git merge SubBranch</code>
                         </li>
                         <li>
-                            If you just want to <strong> view all your branches </strong> <br>
-                            <code>
-                        $ git branch <br>
-                        * main <br>
-                        testing
-                    </code>
+                            If you just want to <strong> view all your branches </strong>
+                            <code>$ git branch 
+* main 
+testing</code>
                         </li>
 
                         <li>
-                            To see the last commit on each branch, you can run <br>
+                            To see the last commit on each branch, you can run
                             <code> git branch -v</code>
                         </li>
 
                         <li>
-                            To <strong> delete the local branch </strong> use one of the following: <br>
-                            <code>$ git branch -d branch_name</code> <br>
+                            To <strong> delete the local branch </strong> use one of the following:
+                            <code>$ git branch -d branch_name</code>
                             <code>$ git branch -D branch_name</code>
                         </li>
 
                         <li>
-                            To remove a remote branch from the server: <br>
+                            To remove a remote branch from the server:
                             <code>$ git push origin --delete {the_remote_branch}</code>
                         </li>
                     </ul>

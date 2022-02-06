@@ -21,7 +21,7 @@
 
 html {
     font-size: 62.5%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
     
 }
 
@@ -29,6 +29,12 @@ html {
     
     /* Creating custom selectors, like a global variable */
     /* font families */
+
+    --ff-navbar: 'Acme', sans-serif;
+    --ff-primary: 'Cookie', cursive;
+    --ff-secondary: 'Quintessential', cursive;
+    --ff-tertiary: 'Roboto Condensed', sans-serif;
+    
     
     /* font weights */
     --fw-reg:  300;
@@ -44,38 +50,50 @@ html {
     --fs-h3: 2rem;
     --fs-h4: 1.8rem;
     --fs-body: 1.6rem;
-    --fs-code: 1.1rem;
+    --fs-code: .5rem;
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.25);
 }
 
 /* global settings */
 
 body {
-    font-size: var(--fs-body);
-    line-height: 2rem;
+    font-size: var(--fs-h3);
+    line-height: 2.5rem;
     display: grid;
     grid-template-columns: 1fr;
     background-color: rgb(239, 239, 239);
-    margin-bottom: 3rem 0;
+    max-width: 100%;
+    max-height: 90%;
+    width: 100vw;
+    height: 90vh;
+    font-family: var(--ff-navbar);
 }
 
-
+.boldlist {
+    font-weight: bolder;
+}
 
 ul li {
     list-style: none;
+    margin: 1rem 0;
 }
 
 ul li::before {
     content: "\f192";
     font-family: FontAwesome;
     color: var(--clr-header);
-    padding: 0 1rem;
+    padding: 0 .5rem;
+    font-size: small;
 }
 
 header, h2, h3, h4 {
-    font-weight: var(--fw-bold);
+    font-family: var(--ff-navbar);
     color: var(--clr-header);
-    /* color: var(--clr-dark); */
+}
+
+.mainhead .main-title {
+    /* grid-area: Head; */
+    font-size: 3.5rem;
 }
 
 header {
@@ -86,92 +104,24 @@ header {
     
 }
 
-.mainhead .main-title {
-    /* grid-area: Head; */
-    font-size: 3.5rem;
-}
-
-/* #navbar {
-    grid-area: Nav;
-} */
-
-/* #main-doc {
-    grid-area: MainDoc;
-} */
-
-h2 {
-    font-size: var(--fs-h2);
-    text-decoration: underline;
-    margin: 1.6rem 0;
-}
-
-h3 {
-    font-size: var(--fs-h3);
-}
-
-h4 {
-    font-size: var(--fs-h4);
-}
-
-code {
-    background-color: lightslategray;
-    font-size: var(--fs-code);
-    padding: .18rem .5rem;
-    color: white;
-    word-break: break-all;
-}
-
-.ignoreinfo {
-    padding: 0;
-}
-
 a {
-    color: var(--clr-dark);
+    font-family: var(--ff-navbar);
+    color: var(--clr-header);
     text-decoration: none;
 }
 
+a:hover {
+    color: darkgreen;
+}
+
 p {
-    padding-bottom: 1rem;
+    padding: 1rem 0;
 }
 
 ul ul,
 .initrepo-head {
     width: 90%;
     margin: 0 auto;
-}
-
-
-
-#navbar ul {
-    /* background-color: lightgray; */
-    padding-bottom: 1.5rem;
-    margin: 0 1em;
-}
-
-#navbar ul li {
-    list-style: none;
-}
-
-#navbar ul li::before {
-    content: '';
-}
-
-#navbar ul li:not(:last-of-type) {
-    border-bottom: 1px solid var(--clr-header);
-    padding: .75rem;
-}
-
-#navbar ul li:last-of-type {
-    padding: .75rem;
-    border-bottom: 3px double var(--clr-header);
-}
-
-#main-doc,
-#navbar {
-    max-width: 90vw;
-    width: 90%;
-    margin: 0 auto 3rem;
-    
 }
 
 #navbar {
@@ -181,19 +131,50 @@ ul ul,
     overflow: scroll;
 }
 
-#main-doc {
-    height: 60vh;
-    overflow: scroll;
-}
-
 #navbar header {
     background-color: #fff;
 }
 
-#navbar ul li a {
-    font-size: var(--fs-h3);
+#navbar ul {
+    background-color: lightgray;
+    padding-bottom: 1.5rem;
+    margin: 0 1em;
 }
 
+#navbar ul li {
+    list-style: none;
+    padding: .75rem;
+}
+
+#navbar ul li::before {
+    content: '';
+}
+
+#navbar ul li:not(:last-of-type) {
+    border-bottom: 1px solid var(--clr-dark);
+}
+
+#navbar ul li:last-of-type {
+    border-bottom: 3px double var(--clr-header);
+}
+
+
+#main-doc {
+    height: 60vh;
+    overflow: scroll;
+    margin: 1rem 2rem;
+}
+
+code {
+    color: white;
+    word-break: break-all;
+    display: block;
+    white-space: pre-wrap ;
+    border-radius: 3px;
+    background-color: lightslategray;
+    margin: 1rem;
+    padding: .5rem .5rem;
+}
 
 
 @media (min-width: 768px) {
@@ -209,9 +190,12 @@ ul ul,
         grid-column: 1/-1;
     }
 
-    #navbar {
-        width: 30vw;
+    #navbar, #main-doc {
         height: 80vh;
+    }
+
+    #navbar {
+        width: 35vw;
         overflow-y: auto;
         position: relative;
         margin: 0 auto 3rem;
@@ -223,10 +207,7 @@ ul ul,
     }
 
     #main-doc {
-        /* border: 1px solid orange; */
-        height: 80vh;
         overflow: auto;
-        /* height: 57vh; */
         padding: 0 2rem;
     }    
 }
