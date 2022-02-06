@@ -1,0 +1,218 @@
+/* #What_is_Git,
+#Installing_Git,
+#Initial_globals_config,
+#Getting_Git_Repository,
+#Checking_Files_Status,
+#Gitignore,
+#Adding_changes,
+#Committing_changes,
+#Skipping_Staging_Area,
+#Removing_Files,
+#List_Version_History,
+#Remotes,
+#Git_Branching  */
+
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+    
+}
+
+:root {
+    
+    /* Creating custom selectors, like a global variable */
+    /* font families */
+
+    --ff-navbar: 'Acme', sans-serif;
+    --ff-primary: 'Cookie', cursive;
+    --ff-secondary: 'Quintessential', cursive;
+    --ff-tertiary: 'Ubuntu', sans-serif;;
+    
+    
+    /* font weights */
+    --fw-reg:  300;
+    --fw-med:  500;
+    --fw-bold: 700;
+
+    --clr-light: #fff;
+    
+    --clr-header: rgb(228, 82, 58);
+    --clr-headerBG: #ddd;
+
+    --clr-dark: #303030;
+    --clr-header-dark: rgb(82, 50, 45);
+    --clr-headerBG-dark: #404040;
+
+    --fs-h1: 2.5rem;
+    --fs-h2: 2rem;
+    --fs-body: 1.6rem;
+    --fs-code: 1.2rem;
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.25);
+}
+
+/* global settings */
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: var(--clr-dark);
+    max-width: 100%;
+    max-height: 90%;
+    width: 100vw;
+    height: 90vh;
+    font-family: var(--ff-tertiary);
+    font-size: var(--fs-body);
+    color: #eee;
+}
+
+header, h2, h3, h4 {
+    font-weight: var(--fw-bold);
+    color: var(--clr-header);
+}
+
+.mainhead .main-title {
+    /* grid-area: Head; */
+    font-size: 3.5rem;
+}
+
+header {
+    background-color: var(--clr-headerBG-dark);
+    border-radius: 2px;
+    font-size: var(--fs-h1);   
+    margin: 1rem 0rem;
+    padding: 1rem 1rem;
+    
+}
+
+#main-doc ul li {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+#main-doc ul li::before {
+    content: "\f192";
+    font-family: FontAwesome;
+    color: var(--clr-header);
+    padding: 0 .5rem;
+    font-size: small;
+}
+
+.boldlist {
+    font-weight: var(--fw-med);
+    font-size: var(--fs-h2);
+}
+
+a {
+    font-family: var(--ff-tertiary);
+    color: var(--clr-header);
+    text-decoration: none;
+    font-weight: var(--fw-med);
+}
+
+a:hover {
+    color: darkgreen;
+}
+
+p {
+    padding: 1rem 0;
+}
+
+#main-doc ul ul,
+.initrepo-head {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+#navbar {
+    position: sticky;
+    top: 0;
+    height: 30vh;
+    overflow: scroll;
+}
+
+#navbar header {
+    background-color: #eee;    
+}
+
+#navbar ul li {
+    list-style: none;
+}
+
+#navbar ul li a {
+    display: block;
+    text-align: center;
+    padding: 1rem 1rem;
+    font-size: var(--fs-h2);
+}
+
+#navbar ul li:not(:last-of-type) {
+    border-bottom: 3px solid var(--clr-headerBG-dark);
+}
+
+#navbar ul li:last-of-type {
+    border-bottom: 3px double var(--clr-headerBG);
+    margin-bottom: 2rem;
+}
+
+#main-doc {
+    height: 60vh;
+    overflow: scroll;
+    margin: 1rem 2rem;
+}
+
+.codetags {
+    color: white;
+    word-break: break-all;
+    display: block;
+    white-space: pre-wrap ;
+    border-radius: 3px;
+    background-color: var(--clr-header-dark);
+    margin: 1rem;
+    padding: .75rem .5rem;
+    font-size: var(--fs-code);
+
+}
+
+
+@media (min-width: 768px) {
+
+
+    body {
+        grid-template-columns: 1fr 3fr;
+        width: 95vw;
+        max-width: 95vw; 
+    }
+
+    .mainhead{
+        grid-column: 1/-1;
+    }
+
+    #navbar, #main-doc {
+        height: 80vh;
+    }
+
+    #navbar {
+        width: 35vw;
+        overflow-y: auto;
+        position: relative;
+        /* margin: 0 auto 3rem; */
+    }
+
+    #navbar > header {
+        position: sticky;
+        top: 0;
+    }
+
+    #main-doc {
+        overflow: auto;
+        padding: 0 2rem;
+    }    
+}

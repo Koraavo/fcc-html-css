@@ -33,11 +33,12 @@ html {
     --ff-navbar: 'Acme', sans-serif;
     --ff-primary: 'Cookie', cursive;
     --ff-secondary: 'Quintessential', cursive;
-    --ff-tertiary: 'Roboto Condensed', sans-serif;
+    --ff-tertiary: 'Ubuntu', sans-serif;;
     
     
     /* font weights */
     --fw-reg:  300;
+    --fw-med:  500;
     --fw-bold: 700;
 
     --clr-light: #fff;
@@ -46,11 +47,9 @@ html {
     --clr-headerBG: #ddd;
 
     --fs-h1: 2.5rem;
-    --fs-h2: 2.25rem;
-    --fs-h3: 2rem;
-    --fs-h4: 1.8rem;
+    --fs-h2: 2rem;
     --fs-body: 1.6rem;
-    --fs-code: 1.4rem;
+    --fs-code: 1.2rem;
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.25);
 }
 
@@ -64,12 +63,12 @@ body {
     max-height: 90%;
     width: 100vw;
     height: 90vh;
-    font-family: var(--ff-navbar);
-    font-size: var(--fs-h3);
-    
+    font-family: var(--ff-tertiary);
+    font-size: var(--fs-body);
 }
 
 header, h2, h3, h4 {
+    font-weight: var(--fw-bold);
     color: var(--clr-header);
 }
 
@@ -100,10 +99,16 @@ header {
     font-size: small;
 }
 
+.boldlist {
+    font-weight: var(--fw-med);
+    font-size: var(--fs-h2);
+}
+
 a {
-    font-family: var(--ff-navbar);
+    font-family: var(--ff-tertiary);
     color: var(--clr-header);
     text-decoration: none;
+    font-weight: var(--fw-med);
 }
 
 a:hover {
@@ -141,6 +146,7 @@ p {
     display: block;
     text-align: center;
     padding: 1rem 1rem;
+    font-size: var(--fs-h2);
 }
 
 #navbar ul li:not(:last-of-type) {
