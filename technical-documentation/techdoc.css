@@ -50,14 +50,13 @@ html {
     --fs-h3: 2rem;
     --fs-h4: 1.8rem;
     --fs-body: 1.6rem;
-    --fs-code: 1.2rem;
+    --fs-code: 1.4rem;
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.25);
 }
 
 /* global settings */
 
 body {
-    line-height: 2.5rem;
     display: grid;
     grid-template-columns: 1fr;
     background-color: rgb(239, 239, 239);
@@ -70,21 +69,7 @@ body {
     
 }
 
-ul li {
-    list-style: none;
-    margin: 1rem 0;
-}
-
-ul li::before {
-    content: "\f192";
-    font-family: FontAwesome;
-    color: var(--clr-header);
-    padding: 0 .5rem;
-    font-size: small;
-}
-
 header, h2, h3, h4 {
-    font-family: var(--ff-navbar);
     color: var(--clr-header);
 }
 
@@ -95,10 +80,24 @@ header, h2, h3, h4 {
 
 header {
     background-color: var(--clr-headerBG);
+    border-radius: 2px;
     font-size: var(--fs-h1);   
     margin: 1rem 0rem;
     padding: 1rem 1rem;
     
+}
+
+#main-doc ul li {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+#main-doc ul li::before {
+    content: "\f192";
+    font-family: FontAwesome;
+    color: var(--clr-header);
+    padding: 0 .5rem;
+    font-size: small;
 }
 
 a {
@@ -115,11 +114,12 @@ p {
     padding: 1rem 0;
 }
 
-ul ul,
+#main-doc ul ul,
 .initrepo-head {
     width: 90%;
     margin: 0 auto;
 }
+
 
 #navbar {
     position: sticky;
@@ -129,32 +129,28 @@ ul ul,
 }
 
 #navbar header {
-    background-color: #fff;
-}
-
-#navbar ul {
-    background-color: lightgray;
-    padding-bottom: 1.5rem;
-    margin: 0 1em;
+    background-color: #fff;    
 }
 
 #navbar ul li {
     list-style: none;
-    padding: .75rem;
+    background-color: lightgray;
 }
 
-#navbar ul li::before {
-    content: '';
+#navbar ul li a {
+    display: block;
+    text-align: center;
+    padding: 1rem 1rem;
 }
 
 #navbar ul li:not(:last-of-type) {
-    border-bottom: 1px solid var(--clr-dark);
+    border-bottom: 3px solid var(--clr-headerBG);
 }
 
 #navbar ul li:last-of-type {
     border-bottom: 3px double var(--clr-header);
+    margin-bottom: 2rem;
 }
-
 
 #main-doc {
     height: 60vh;
@@ -170,8 +166,9 @@ ul ul,
     border-radius: 3px;
     background-color: lightslategray;
     margin: 1rem;
-    padding: 0 .5rem;
+    padding: .75rem .5rem;
     font-size: var(--fs-code);
+
 }
 
 
@@ -196,7 +193,7 @@ ul ul,
         width: 35vw;
         overflow-y: auto;
         position: relative;
-        margin: 0 auto 3rem;
+        /* margin: 0 auto 3rem; */
     }
 
     #navbar > header {
