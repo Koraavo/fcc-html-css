@@ -8,9 +8,11 @@
     <title>GIT CHEAT</title>
     <link rel="stylesheet" href="./techdoc.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
     <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -20,7 +22,7 @@
     <nav id="navbar">
         <header>LET'S GIT THIS</header>
         <ul>
-            <li><a href="#What_is_git?" class="nav-link">What is git?</a></li>
+            <li><a href="#What_is_Git?" class="nav-link">What is Git?</a></li>
             <li><a href="#Installing_Git" class="nav-link">Installing Git</a></li>
             <li><a href="#Initial_globals_config" class="nav-link">Initial globals config</a></li>
             <li><a href="#Getting_Git_Repository" class="nav-link">Getting Git Repository</a></li>
@@ -31,18 +33,19 @@
             <li><a href="#Skipping_Staging_Area" class="nav-link">Skipping Staging Area</a></li>
             <li><a href="#Removing_Files" class="nav-link">Removing Files</a></li>
             <li><a href="#List_Version_History" class="nav-link">List Version History</a></li>
+            <li><a href="#Remotes" class="nav-link">Remotes</a></li>
+            <li><a href="#Git_Branching" class="nav-link">Git Branching</a></li>
+
             <li><a href="#Committing_changes" class="nav-link">Committing changes</a></li>
-            <li><a href="#Committing_changes" class="nav-link">Committing changes</a></li>
-            <li><a href="#Committing_changes" class="nav-link">Committing changes</a></li>
-            
+
 
         </ul>
     </nav>
 
 
     <main id="main-doc">
-        <section class="main-section" id="What_is_git?">
-            <header>What is git?</header>
+        <section class="main-section" id="What_is_Git?">
+            <header>What is Git?</header>
             <article>
                 <p>
                     Git is a version-control system for tracking changes in computer files and
@@ -208,26 +211,25 @@
 
                         Here are a few <a href="https://github.com/github/gitignore">templates</a> for .gitignore files.
                     </p>
-                    <code>
-                # ignore all .a files <br>
-                *.a <br>
 
-                # but do track lib.a, even though you're ignoring .a files above <br>
-                !lib.a <br>
+                    <p class="ignoreinfo"># ignore all .a files</p>
+                    <code>*.a </code>
 
-                # only ignore the TODO file in the current directory, not subdir/TODO <br>
-                /TODO <br>
+                    <p class="ignoreinfo"># but do track lib.a, even though you're ignoring .a files above </p>
+                    <code>!lib.a</code> <br>
+                    <p class="ignoreinfo">
+                        # only ignore the TODO file in the current directory, not subdir/TODO
+                    </p>
+                    <code> /TODO </code> <br>
 
-                # ignore all files in any directory named build <br>
-                build/ <br>
+                    <p class="ignoreinfo"> # ignore all files in any directory named build </p>
+                    <code>build/</code> <br>
+                    <p class="ignoreinfo"> # ignore doc/notes.txt, but not doc/server/arch.txt </p>
+                    <code>doc/*.txt </code> <br>
+                    <p class="ignoreinfo">
+                        # ignore all .pdf files in the doc/ directory and any of its subdirectories </p>
+                    <code>doc/**/*.pdf </code>
 
-                # ignore doc/notes.txt, but not doc/server/arch.txt <br>
-                doc/*.txt <br>
-
-                # ignore all .pdf files in the doc/ directory and any of its subdirectories <br>
-                doc/**/*.pdf 
-            </code>
-                    
                 </article>
             </section>
 
@@ -299,7 +301,7 @@
                         <code>$ git rm file1.txt</code>
                         <li>If you only want to remove the file from the repository, but keep it on the filesystem, you
                             can add the --cached flag:</li>
-                        <code>$ git rm file2.txt --cached</code>
+                        <code>$ git rm -r --cached myFolder</code>
                         <li>
                             When trying to delete multiple files in a directory or via a glob pattern, you might want to
                             perform a "dry-run" first and see which files would be removed:
@@ -323,18 +325,90 @@
                     $ git log
                 </code>
 
-                <p>
-                    To see what you’ve changed but not yet staged, type git diff with no other arguments:
-                </p>
-                <code>$ git diff</code>
+                    <p>
+                        To see what you’ve changed but not yet staged, type git diff with no other arguments:
+                    </p>
+                    <code>$ git diff</code>
 
-                <p>
-                    One of the more helpful options is -p or --patch, which shows the difference (the patch output) introduced in each commit. You can also limit the number of log entries displayed, such as using -2 to show only the last two entries.
-                </p>
+                    <p>
+                        One of the more helpful options is -p or --patch, which shows the difference (the patch output)
+                        introduced in each commit. You can also limit the number of log entries displayed, such as using
+                        -2 to show only the last two entries.
+                    </p>
 
-                <code>$ git log -p -2</code>
+                    <code>$ git log -p -2</code>
                 </article>
             </section>
+
+            <section class="main-section" id="Remotes">
+                <header>Remotes</header>
+                <article>
+                    <p>
+                        When you have your project at a point that you want to share, you have to push it upstream. 
+                        The command for this is simple
+                    </p>
+                    <code>$ git push origin main</code>
+                <p>If you want to see more information about a particular remote, you can use</p>
+                <code>$ git remote show origin
+                    * remote origin
+                    Fetch URL: https://github.com/schacon/ticgit
+                    Push  URL: https://github.com/schacon/ticgit
+                    HEAD branch: master
+                    Remote branches:
+                    main tracked
+                    dev-branch tracked
+                    Local branch configured for 'git pull':
+                    main merges with remote master
+                    Local ref configured for 'git push':
+                    main pushes to main (up to date)
+                </code>
+                <p>
+                    You can run git remote rename to change a remote’s shortname. For instance, if you want to rename pb to paul, you can do so with git remote rename:
+                </p>
+
+                <code>$ git remote rename pb paul</code>
+                <code>$ git remote <br>
+                    origin <br>
+                    paul </code>
+
+                    <p>If you want to remove a remote for some reason</p>
+                    <code>$ git remote remove paul</code>
+                    <code>$ git remote <br>
+                        origin </code>
+                </article>
+            </section>
+
+            <section class="main-section" id="Git_branching">
+                <header>Git Branching</header>
+                <article>
+                    <p>
+                        Say you want to make a new feature but are worried about making changes to the main project while developing the feature. This is where git branches come in. 
+                    </p>
+
+                    <p>What happens when you create a new branch? Well, doing so creates a new pointer for you to move around. Let’s say you want to create a new branch called testing. You do this with the git branch command:</p>
+
+                    <code>$ git branch testing</code>
+
+                    <p>How does Git know what branch you’re currently on? It keeps a special pointer called HEAD.</p>
+                    <p>
+                        In Git, this is a pointer to the local branch you’re currently on. In this case, you’re still on main. The git branch command only created a new branch — it didn’t switch to that branch.
+                    </p>
+                    <p>You can easily see this by running a simple git log command that shows you where the branch pointers are pointing. This option is called --decorate.</p>
+                    <code>$ git log --oneline --decorate <br>
+                        0fb4f64 (HEAD -> main, origin/main, testing) removed otherpeople dir<br>
+                        d661693 changes to regform and first version of techdoc <br>
+                        571b3d5 changes to regform and first version of techdoc <br>
+                        a94d55b ignore file <br>
+                        015bbc4 ignore updated <br>
+                        deeb8a2 edits in tribute page for accessibility <br>
+                        dee714c FreecodeCampProjects
+                    </code>
+
+                    <p>To switch to an existing branch, you run the git checkout command. Let’s switch to the new testing branch:</p>
+                    <code>$ git checkout testing</code>
+                </article>
+            </section>
+
     </main>
 
 </body>

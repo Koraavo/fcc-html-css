@@ -84,11 +84,15 @@ h4 {
 }
 
 code {
-    background-color: lightcoral;
+    background-color: lightslategray;
     font-size: var(--fs-code);
     padding: .18rem .5rem;
     color: white;
     word-break: break-all;
+}
+
+.ignoreinfo {
+    padding: 0;
 }
 
 a {
