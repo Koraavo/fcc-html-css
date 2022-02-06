@@ -406,6 +406,16 @@
 
                     <p>To switch to an existing branch, you run the git checkout command. Let’s switch to the new testing branch:</p>
                     <code>$ git checkout testing</code>
+                    <p>
+                        To create a new branch and switch to it at the same time, you can run the git checkout command with the -b switch
+                    </p>
+                    <code>
+                        $ git checkout -b iss53 <br>
+                        Switched to a new branch "iss53"
+                    </code>
+
+                    <p>You shall see that your testing branch has moved forward but the main is still pointing to the previous commit</p>
+
                 </article>
             </section>
 
