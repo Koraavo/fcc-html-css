@@ -36,8 +36,6 @@
             <li><a href="#Remotes" class="nav-link">Remotes</a></li>
             <li><a href="#Git_Branching" class="nav-link">Git Branching</a></li>
 
-            <li><a href="#Committing_changes" class="nav-link">Committing changes</a></li>
-
 
         </ul>
     </nav>
@@ -348,30 +346,30 @@
                     </p>
                     <code>$ git push origin main</code>
                 <p>If you want to see more information about a particular remote, you can use</p>
-                <code>$ git remote show origin
-                    * remote origin
-                    Fetch URL: https://github.com/schacon/ticgit
-                    Push  URL: https://github.com/schacon/ticgit
-                    HEAD branch: master
-                    Remote branches:
-                    main tracked
-                    dev-branch tracked
-                    Local branch configured for 'git pull':
-                    main merges with remote master
-                    Local ref configured for 'git push':
+                <code>$ git remote show origin <br>
+                    * remote origin <br>
+                    Fetch URL: https://github.com/schacon/ticgit <br>
+                    Push  URL: https://github.com/schacon/ticgit <br>
+                    HEAD branch: main <br>
+                    Remote branches: <br>
+                    main tracked <br>
+                    dev-branch tracked <br>
+                    Local branch configured for 'git pull': <br>
+                    main merges with remote master <br>
+                    Local ref configured for 'git push': <br>
                     main pushes to main (up to date)
                 </code>
                 <p>
                     You can run git remote rename to change a remote’s shortname. For instance, if you want to rename pb to paul, you can do so with git remote rename:
                 </p>
 
-                <code>$ git remote rename pb paul</code>
+                <code>$ git remote rename pb paul</code> <br>
                 <code>$ git remote <br>
                     origin <br>
                     paul </code>
 
                     <p>If you want to remove a remote for some reason</p>
-                    <code>$ git remote remove paul</code>
+                    <code>$ git remote remove paul</code> <br>
                     <code>$ git remote <br>
                         origin </code>
                 </article>
@@ -416,7 +414,7 @@
                     <p>You shall see that your testing branch has moved forward but the main is still pointing to the previous commit</p>
 
                     <p>If you want to merge changes in SubBranch to MainBranch</p>
-                    <code>$ git checkout MainBranch</code>
+                    <code>$ git checkout MainBranch</code> <br>
                     <code>$ git merge SubBranch</code>
 
                     <p>If you just want to view all your branches</p>
