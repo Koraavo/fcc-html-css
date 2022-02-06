@@ -430,8 +430,12 @@
                     </p>
                     <code> git branch -v</code>
 
-                    <p>You can delete a remote branch using the --delete option to git push.</p>
-                    <code>$ git push origin --delete serverfix</code>
+                    <p>To delete the local branch use one of the following:</p>
+                    <code>$ git branch -d branch_name</code> <br>
+                    <code>$ git branch -D branch_name</code>
+
+                    <p>To remove a remote branch from the server:</p>
+                    <code>$ git push origin --delete {the_remote_branch}</code>
                 </article>
             </section>
 
