@@ -100,34 +100,51 @@
             <section class="main-section" id="Installing_Git">
                 <header>Installing Git</header>
                 <article>
-                    <h2>Mac OS</h2>
-                    <h3>Check Git installation using</h3>
-                    <code>$ git --version</code>
-                    <p>You will be prompted to install git, if it is not installed</p>
-                    <h3>Using Homebrew</h3>
                     <ul>
-                        <li>Install Homebrew using the following command</li>
-                        <code>$ 
-                    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-                </code>
-                        <li>Update Homebrew</li>
-                        <code>$ brew update</code>
-                        <li>Install Git</li>
-                        <code>$ brew install git</code>
-                    </ul>
-
-                    <h2>Windows</h2>
-                    <ul>
-                        <li>Navigate to Git's Website
-                            <a href="https://git-scm.com/download/win">Download Page</a>
+                        <li>
+                            Mac OS
+                            <ul>
+                                <li>Checking Git version</li>
+                                <ul>
+                                    <li>Check Git installation using <br></li>
+                                    <code>$ git --version</code> <br>
+                                    <li>You will be prompted to install git, if it is not installed</li>
+                                </ul>
+                            </ul>
+                            <ul>
+                                <li>Using Homebrew</li>
+                                <ul>
+                                    <li>Install Homebrew using the following command</li>
+                                    <code>$ 
+                                            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+                                            </code>
+                                    <li>Update Homebrew</li>
+                                    <code>$ brew update</code>
+                                    <li>Install Git</li>
+                                    <code>$ brew install git</code>
+                                </ul>
+                            </ul>
                         </li>
-                        <li>Double click on a recent version of Git to download Git for Windows.</li>
-                        <li>Follow instructions to install git</li>
+                        <li>
+                            Windows
+                            <ul>
+                                <li>Navigate to Git's Website
+                                    <a href="https://git-scm.com/download/win">Download Page</a>
+                                </li>
+                                <li>Double click on a recent version of Git to download Git for Windows.</li>
+                                <li>Follow instructions to install git</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Debian/Ubuntu
+                            <ul>
+                                <li>Run the following command to update and then install git</li>
+                                <code>$ sudo apt update</code> <br>
+                                <code>$ sudo apt install git</code>
+                            </ul>
+                        </li>
                     </ul>
-                    <h2>Ubunto or Debian</h2>
-                    <p>Run the following command to update and then install git</p>
-                    <code>$ sudo apt update</code> <br>
-                    <code>$ sudo apt install git</code>
+                        
                 </article>
             </section>
 
@@ -135,8 +152,9 @@
                 <header>Initial globals config</header>
                 <article>
                     <p>You can view all of your settings and where they are coming from using:</p>
-                    <code>$ git config --list --show-origin</code>
-                    <h2>Your Identity</h2>
+                    <code>$ git config --list --show-origin</code> 
+                    
+                    <h3>Your Identity</h3>
                     <p>
                         The first thing you should do when you install Git is to set your user name and email address.
                         This is important because every Git commit uses this information, and it’s immutably baked into
@@ -352,7 +370,8 @@
 
                     <ul>
                         <li>
-                            If you want to <strong> see more information </strong> about a particular remote, you can use <br>
+                            If you want to <strong> see more information </strong> about a particular remote, you can
+                            use <br>
                             <code>$ git remote show origin <br>
                                 * remote origin <br>
                                 Fetch URL: https://github.com/schacon/ticgit <br>
@@ -368,7 +387,8 @@
                             </code>
                         </li>
                         <li>
-                            You can run git remote rename to <strong> change a remote’s shortname </strong>. For instance,
+                            You can run git remote rename to <strong> change a remote’s shortname </strong>. For
+                            instance,
                             if you want to rename pb to paul, you can do so with git remote rename: <br>
                             <code>$ git remote rename pb paul</code> <br>
                             <code>$ git remote <br>
@@ -421,12 +441,12 @@
                     <ul>
                         <li>
                             To <strong> switch to an existing branch </strong>, you run the git checkout command.
-                                Let’s switch to the new testing branch: <br>
+                            Let’s switch to the new testing branch: <br>
                             <code>$ git checkout testing</code>
                         </li>
                         <li>
-                                To <strong> create a new branch and switch to it at the same time </strong>, you can run
-                                the git checkout command with the -b switch <br>
+                            To <strong> create a new branch and switch to it at the same time </strong>, you can run
+                            the git checkout command with the -b switch <br>
                             <code>
                                 $ git checkout -b iss53 <br>
                                 Switched to a new branch "iss53"

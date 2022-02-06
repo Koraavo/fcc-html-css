@@ -37,6 +37,7 @@ html {
     --clr-light: #fff;
     --clr-dark: #303030;
     --clr-header: rgb(228, 82, 58);
+    --clr-headerBG: #ddd;
 
     --fs-h1: 2.5rem;
     --fs-h2: 2.25rem;
@@ -74,10 +75,11 @@ ul li::before {
 header, h2, h3, h4 {
     font-weight: var(--fw-bold);
     color: var(--clr-header);
+    /* color: var(--clr-dark); */
 }
 
 header {
-    background-color: rgb(231, 219, 218);
+    background-color: var(--clr-headerBG);
     font-size: var(--fs-h1);   
     margin: 1rem 0rem;
     padding: 1rem 1rem;
@@ -124,7 +126,7 @@ code {
 }
 
 a {
-    color: var(--clr-header);
+    color: var(--clr-dark);
     text-decoration: none;
 }
 
