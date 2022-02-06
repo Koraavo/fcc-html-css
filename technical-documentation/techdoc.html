@@ -415,6 +415,23 @@
 
                     <p>You shall see that your testing branch has moved forward but the main is still pointing to the previous commit</p>
 
+                    <p>If you want to merge changes in SubBranch to MainBranch</p>
+                    <code>$ git checkout MainBranch</code>
+                    <code>$ git merge SubBranch</code>
+
+                    <p>If you just want to view all your branches</p>
+                    <code>
+                        $ git branch <br>
+                        * main <br>
+                        testing
+                    </code>
+                    <p>
+                        To see the last commit on each branch, you can run 
+                    </p>
+                    <code> git branch -v</code>
+
+                    <p>You can delete a remote branch using the --delete option to git push.</p>
+                    <code>$ git push origin --delete serverfix</code>
                 </article>
             </section>
 
