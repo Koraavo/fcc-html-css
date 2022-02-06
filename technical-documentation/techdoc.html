@@ -158,9 +158,10 @@
                 <header>Getting Git Repository</header>
                 <article>
                     <p>You typically obtain a Git repository in one of two ways:</p>
+
                     <ul>
                         <li>
-                            <h2>Initializing a Git Repository</h2>
+                            Initializing a Git Repository
                         </li>
 
                         <ul>
@@ -173,7 +174,7 @@
                             <code>$ git init</code>
                         </ul>
                         <li>
-                            <h2>Clone a Repository</h2>
+                            Clone a Repository
                         </li>
                         <code>$ git clone [url]</code>
                     </ul>
@@ -293,11 +294,13 @@
                     </p>
                     <ul>
                         <li>
-                            To remove a file <strong> both from the Git repository and the filesystem </strong>, you can use git rm without
+                            To remove a file <strong> both from the Git repository and the filesystem </strong>, you can
+                            use git rm without
                             any parameters (except for the file's name, of course):
                         </li>
                         <code>$ git rm file1.txt</code>
-                        <li>If you only want to <strong> remove the file from the repository, but keep it on the filesystem </strong>, you
+                        <li>If you only want to <strong> remove the file from the repository, but keep it on the
+                                filesystem </strong>, you
                             can add the --cached flag:</li>
                         <code>$ git rm -r --cached myFolder</code>
                         <li>
@@ -341,37 +344,45 @@
                 <header>Remotes</header>
                 <article>
                     <p>
-                        When you have your project at a point that you want to share, and add it to your repository on github, you have to push it upstream. 
+                        When you have your project at a point that you want to share, and add it to your repository on
+                        github, you have to push it upstream.
                         The command for this is simple
                     </p>
                     <code>$ git push origin main</code>
-                <p>If you want to <strong> see more information </strong> about a particular remote, you can use</p>
-                <code>$ git remote show origin <br>
-                    * remote origin <br>
-                    Fetch URL: https://github.com/schacon/ticgit <br>
-                    Push  URL: https://github.com/schacon/ticgit <br>
-                    HEAD branch: main <br>
-                    Remote branches: <br>
-                    main tracked <br>
-                    dev-branch tracked <br>
-                    Local branch configured for 'git pull': <br>
-                    main merges with remote master <br>
-                    Local ref configured for 'git push': <br>
-                    main pushes to main (up to date)
-                </code>
-                <p>
-                    You can run git remote rename to <strong> change a remote’s shortname </strong>. For instance, if you want to rename pb to paul, you can do so with git remote rename:
-                </p>
 
-                <code>$ git remote rename pb paul</code> <br>
-                <code>$ git remote <br>
-                    origin <br>
-                    paul </code>
+                    <ul>
+                        <li>
+                            If you want to <strong> see more information </strong> about a particular remote, you can use <br>
+                            <code>$ git remote show origin <br>
+                                * remote origin <br>
+                                Fetch URL: https://github.com/schacon/ticgit <br>
+                                Push  URL: https://github.com/schacon/ticgit <br>
+                                HEAD branch: main <br>
+                                Remote branches: <br>
+                                main tracked <br>
+                                dev-branch tracked <br>
+                                Local branch configured for 'git pull': <br>
+                                main merges with remote master <br>
+                                Local ref configured for 'git push': <br>
+                                main pushes to main (up to date)
+                            </code>
+                        </li>
+                        <li>
+                            You can run git remote rename to <strong> change a remote’s shortname </strong>. For instance,
+                            if you want to rename pb to paul, you can do so with git remote rename: <br>
+                            <code>$ git remote rename pb paul</code> <br>
+                            <code>$ git remote <br>
+                            origin <br>
+                            paul </code>
+                        </li>
+                        <li>
+                            If you want to <strong> remove a remote </strong>for some reason <br>
+                            <code>$ git remote remove paul</code> <br>
+                            <code>$ git remote <br>
+                                origin </code>
 
-                    <p>If you want to <strong> remove a remote </strong>for some reason</p>
-                    <code>$ git remote remove paul</code> <br>
-                    <code>$ git remote <br>
-                        origin </code>
+                        </li>
+                    </ul>
                 </article>
             </section>
 
@@ -379,19 +390,24 @@
                 <header>Git Branching</header>
                 <article>
                     <p>
-                        Say you want to make a new feature but are worried about making changes to the main project while developing the feature. This is where git branches come in. 
+                        Say you want to make a new feature but are worried about making changes to the main project
+                        while developing the feature. This is where git branches come in.
                     </p>
 
-                    <p>What happens when you create a new branch? Well, doing so creates a new pointer for you to move around. 
-                        Let’s say you want to create a new branch called testing. You do this with the git branch command:</p>
+                    <p>What happens when you create a new branch? Well, doing so creates a new pointer for you to move
+                        around.
+                        Let’s say you want to create a new branch called testing. You do this with the git branch
+                        command:</p>
 
                     <code>$ git branch testing</code>
 
                     <p>How does Git know what branch you’re currently on? It keeps a special pointer called HEAD.</p>
                     <p>
-                        In Git, this is a pointer to the local branch you’re currently on. In this case, you’re still on main. The git branch command only created a new branch — it didn’t switch to that branch.
+                        In Git, this is a pointer to the local branch you’re currently on. In this case, you’re still on
+                        main. The git branch command only created a new branch — it didn’t switch to that branch.
                     </p>
-                    <p>You can easily see this by running a simple git log command that shows you where the branch pointers are pointing. This option is called --decorate.</p>
+                    <p>You can easily see this by running a simple git log command that shows you where the branch
+                        pointers are pointing. This option is called --decorate.</p>
                     <code>$ git log --oneline --decorate <br>
                         0fb4f64 (HEAD -> main, origin/main, testing) removed otherpeople dir<br>
                         d661693 changes to regform and first version of techdoc <br>
@@ -402,39 +418,53 @@
                         dee714c FreecodeCampProjects
                     </code>
 
-                    <p>To <strong> switch to an existing branch </strong>, you run the git checkout command. Let’s switch to the new testing branch:</p>
-                    <code>$ git checkout testing</code>
-                    <p>
-                        To <strong> create a new branch and switch to it at the same time </strong>, you can run the git checkout command with the -b switch
-                    </p>
-                    <code>
-                        $ git checkout -b iss53 <br>
-                        Switched to a new branch "iss53"
-                    </code>
-
-                    <p>You shall see that your testing branch has moved forward but the main is still pointing to the previous commit</p>
-
-                    <p>If you want to <strong> merge changes in SubBranch to MainBranch </strong> </p>
-                    <code>$ git checkout MainBranch</code> <br>
-                    <code>$ git merge SubBranch</code>
-
-                    <p>If you just want to <strong> view all your branches </strong></p>
-                    <code>
+                    <ul>
+                        <li>
+                            To <strong> switch to an existing branch </strong>, you run the git checkout command.
+                                Let’s switch to the new testing branch: <br>
+                            <code>$ git checkout testing</code>
+                        </li>
+                        <li>
+                                To <strong> create a new branch and switch to it at the same time </strong>, you can run
+                                the git checkout command with the -b switch <br>
+                            <code>
+                                $ git checkout -b iss53 <br>
+                                Switched to a new branch "iss53"
+                            </code>
+                            <p>You shall see that your testing branch has moved forward but the main is still pointing
+                                to the previous commit</p>
+                        </li>
+                        <li>
+                            If you want to <strong> merge changes in SubBranch to MainBranch </strong> <br>
+                            <code>$ git checkout MainBranch</code> <br>
+                            <code>$ git merge SubBranch</code>
+                        </li>
+                        <li>
+                            If you just want to <strong> view all your branches </strong> <br>
+                            <code>
                         $ git branch <br>
                         * main <br>
                         testing
                     </code>
-                    <p>
-                        To see the last commit on each branch, you can run 
-                    </p>
-                    <code> git branch -v</code>
+                        </li>
 
-                    <p>To <strong> delete the local branch </strong> use one of the following:</p>
-                    <code>$ git branch -d branch_name</code> <br>
-                    <code>$ git branch -D branch_name</code>
+                        <li>
+                            To see the last commit on each branch, you can run <br>
+                            <code> git branch -v</code>
+                        </li>
 
-                    <p>To remove a remote branch from the server:</p>
-                    <code>$ git push origin --delete {the_remote_branch}</code>
+                        <li>
+                            To <strong> delete the local branch </strong> use one of the following: <br>
+                            <code>$ git branch -d branch_name</code> <br>
+                            <code>$ git branch -D branch_name</code>
+                        </li>
+
+                        <li>
+                            To remove a remote branch from the server: <br>
+                            <code>$ git push origin --delete {the_remote_branch}</code>
+                        </li>
+                    </ul>
+
                 </article>
             </section>
 

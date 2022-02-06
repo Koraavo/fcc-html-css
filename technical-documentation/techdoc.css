@@ -1,3 +1,18 @@
+/* #What_is_Git,
+#Installing_Git,
+#Initial_globals_config,
+#Getting_Git_Repository,
+#Checking_Files_Status,
+#Gitignore,
+#Adding_changes,
+#Committing_changes,
+#Skipping_Staging_Area,
+#Removing_Files,
+#List_Version_History,
+#Remotes,
+#Git_Branching  */
+
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -6,7 +21,8 @@
 
 html {
     font-size: 62.5%;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 :root {
@@ -42,6 +58,18 @@ body {
     margin-bottom: 3rem 0;
 }
 
+
+
+ul li {
+    list-style: none;
+}
+
+ul li::before {
+    content: "\f192";
+    font-family: FontAwesome;
+    color: var(--clr-header);
+    padding: 0 1rem;
+}
 
 header, h2, h3, h4 {
     font-weight: var(--fw-bold);
@@ -120,6 +148,10 @@ ul ul,
 
 #navbar ul li {
     list-style: none;
+}
+
+#navbar ul li::before {
+    content: '';
 }
 
 #navbar ul li:not(:last-of-type) {
