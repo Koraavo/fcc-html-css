@@ -38,7 +38,7 @@ html {
     
     /* font weights */
     --fw-reg:  300;
-    --fw-bold: 900;
+    --fw-bold: 700;
 
     --clr-light: #fff;
     --clr-dark: #303030;
@@ -50,14 +50,13 @@ html {
     --fs-h3: 2rem;
     --fs-h4: 1.8rem;
     --fs-body: 1.6rem;
-    --fs-code: .5rem;
+    --fs-code: 1.2rem;
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.25);
 }
 
 /* global settings */
 
 body {
-    font-size: var(--fs-h3);
     line-height: 2.5rem;
     display: grid;
     grid-template-columns: 1fr;
@@ -67,10 +66,8 @@ body {
     width: 100vw;
     height: 90vh;
     font-family: var(--ff-navbar);
-}
-
-.boldlist {
-    font-weight: bolder;
+    font-size: var(--fs-h3);
+    
 }
 
 ul li {
@@ -165,7 +162,7 @@ ul ul,
     margin: 1rem 2rem;
 }
 
-code {
+.codetags {
     color: white;
     word-break: break-all;
     display: block;
@@ -173,7 +170,8 @@ code {
     border-radius: 3px;
     background-color: lightslategray;
     margin: 1rem;
-    padding: .5rem .5rem;
+    padding: 0 .5rem;
+    font-size: var(--fs-code);
 }
 
 
