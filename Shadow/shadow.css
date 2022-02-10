@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    background-color: #000;
+    color: white;
+    /* font-family: "Oswald", sans-serif; */
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+    background-color: #111;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 3rem 2rem;
+}
+
+.menu li:first-child {
+    margin-top: 10rem;
+}
+
+
+.menu li {
+    list-style: none;
+}
+
+.login-button a,
+.menu li a {
+    font-size: 1.5rem;
+    color: #eee;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logo {
+    color: white;
+}
+
+.logodiv,
+.logodiv a {
+    font-size: 3rem;
+}
+
+.logodiv a {
+    text-decoration: none;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+
+/* navbars */
+
+.bars,
+.bars::before,
+.bars::after   {
+    background-color: #fff;
+    display: inline-block;
+    height: .3rem;
+    width: 3rem;
+    position: relative;
+    
+}
+
+.bars::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    transition: all .3s ease-out;
+}
+
+.bars::after {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    transition: all .3s ease-out;
+}
+
+.menu-btn:checked ~ .menu-icon .bars{
+    background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .bars::before{
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.menu-btn:checked ~ .menu-icon .bars::after{
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.button.secondary.nav-links {
+    position: relative;
+    left: 41%;
+}
+
+.button.secondary {
+    color: #fff;
+    background: linear-gradient(90deg, rgb(240, 111, 64), rgb(255, 69, 0));
+    background-color: rgb(240, 111, 64);
+    border-radius: 5rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    border: 5px solid rgb(90, 26, 3);
+}
+
+
+.button.secondary:hover {
+    border-left-color: rgb(240, 111, 64);
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: rgb(255, 69, 0);
+}
+
+/* Finally starting with positioning things */
+
+.nav-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 1fr;
+    align-content: center;
+    margin: 0 2rem;
+    gap: 2rem;
+    justify-content: center;
+    
+}
+
+.logodiv {
+    display: flex;
+    order: 1;
+    grid-column: 1/2
+}
+
+.menu {
+    background-color: #111;
+    display: flex;
+}
+
+
+.menu {
+    order: 2;
+    grid-column: 2/6;
+    height: 100vh;
+
+    
+}
+
+.menu li {
+    padding: 1.5rem;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.login-button {
+    order: 3;
+    grid-column: 7;
+    font-size: 1.5rem;
+    position: relative;
+    top: .5rem;
+}
+
+.hamburger {
+    order: 4;
+    grid-column: 8;
+    position: relative;
+    top: .5rem;
+    cursor: pointer;
+}
+
+
+/* menu */
+/* need to slide it down instead of letting it come directly */
+.mobile-show {
+    opacity: 1;
+    max-height: 75rem;
+    display: block;
+    transition: all 1s ease-out;
+}
+
+
+
+.mobile-hide {    
+    /* display: none; */
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    display: block;
+    transition: all 1s ease-out;
+}
+
+.login-show {
+    opacity: 1;
+}
+
+.login-hide {
+    opacity: 0;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* the main page */
+
+section {
+    width: 100%;
+    position: relative;
+    top: 10rem;
+}
+
+.heading {
+    color: #fff;
+    font-size: 4rem;    
+}
+
+.cloud-text {
+    color: rgb(230, 93, 44);
+}
+
+.sub-heading {
+    font-size: 1.6rem;
+}
+
+.button.secondary.main-heading {
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 1.2rem 1.9rem;
+
+}
+
+.watch-video {
+    color: rgb(230, 93, 44);
+    font-size: 2rem;
+    text-decoration: none;
+    margin-left: 2rem;
+}
+
+#home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-height: 100vh;
+    height: 90vh;
+}
+
+.landing-image {
+    transform: rotate(60deg) scale(1.4);
+
+}
+
+.button-watch {
+    position: relative;
+    top: 3rem;
+}
+
+.sub-heading {
+    width: 80%;
+}
+
+.main-title {
+    margin: 0 3rem;
+    letter-spacing: .1rem;
+    grid-column: 1fr;
+}
+
+.price-small {
+    position: relative;
+    top: 1rem;
+    left: 2rem;
+    font-size: 1.1rem;
+    color: lightgray;
+}
+
+/* section 2 */
+
+.sec2-head,
+.sec3-head {
+    color: #eee;
+    font-size: 1.6rem;
+    margin: 0 auto;
+    margin-top: 7rem;
+}
+
+.sec2-head {
+    width: 33%;
+}
+
+#sticky-scrolling {
+    width: 110%;
+    position: relative;
+    left: -20rem;
+    
+}
+
+.scroller {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 0 1rem;
+}
+
+.info {
+    margin: 7rem 0;
+}
+
+
+.monitor {
+    position: sticky;
+    filter: blur(1px);
+    top: 20%;
+}
+
+.info div {
+    margin: 5rem 0;
+    font-size: 1.6rem;
+}
+
+.info-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h3-heads {
+    margin-bottom: 1rem;
+}
+
+.text-scroll {
+    font-size: 1.4rem;
+}
+
+
+.fa-solid {
+    /* border: 1px solid red; */
+    color: white;
+    font-size: 20rem;
+    font-size: 5rem;
+    margin-right: 3rem;
+}
+
+.techspecs {
+    color: #fff;
+    background: linear-gradient(rgb(90, 26, 3), rgb(32, 10, 1));
+    border-radius: 5rem;
+    display: inline-block;
+    padding: 2rem 3rem;
+    cursor: pointer;
+    border: 5px solid rgb(240, 111, 64);
+    text-decoration: none;
+}
+
+
+.techspecs:hover {
+    background: linear-gradient(90deg, rgb(240, 111, 64), rgb(255, 69, 0));
+    border-left-color: rgb(240, 111, 64);
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: rgb(255, 69, 0);
+}
+
+/* section 3 */
+.sec3-head {
+    /* margin: 0 auto; */
+    text-align: center;
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collaboration</title>
+  <link rel="stylesheet" href="./shadow.css">
+
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- <script>
+    $(function(){
+        $(".menu-btn").on("click", function() {
+            if($(".menu").hasClass("mobile-hide") && $(".login-button").hasClass("login-show")){
+                $(".menu").removeClass("mobile-hide");
+                $(".menu").addClass("mobile-show").slideDown();
+                $(".login-button").removeClass("login-show");
+                $(".login-button").addClass("login-hide");
+            }
+
+            else {
+                $(".menu").addClass("mobile-hide");
+                $(".menu").removeClass("mobile-show");
+                $(".login-button").addClass("login-show");
+                $(".login-button").removeClass("login-hide");
+            }
+        })
+    });
+</script> -->
+
+
+</head>
+
+<body>
+
+  <header class="header" id="header">
+    <nav class="nav-container" id="nav-bar">
+      <div class="logodiv">
+        <i class="fas fa-baseball-ball" id="header-img"></i>
+        <a href="#" class="logo">SHADOW</a>
+      </div>
+
+      <div class="hamburger">
+        <input type="checkbox" id="menu-btn" class="menu-btn">
+        <!-- this will become the hamburger -->
+        <label for="menu-btn" class="menu-icon">
+          <span class="bars"></span>
+        </label>
+      </div>
+
+      <div class="login-button login-show"><a href="LOGIN">LOGIN</a></div>
+
+      <ul class="menu mobile-hide">
+        <li class="nav-link "><a href="#">What is Shadow</a></li>
+        <li class="nav-link "><a href="#">Tech Specs</a></li>
+        <li class="nav-link "><a href="#">Requirements</a></li>
+        <li class="nav-link "><a href="#">Support</a></li>
+        <li class="nav-link button "><a href="#">Login</a></li>
+        <li class="nav-link button secondary nav-links"><a href="#">Subscribe</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+
+  <main>
+    <section id="home">
+      <div class="main-title">
+        <h1 class="heading">Your new PC is in the <div class="cloud-text">Cloud</div>
+        </h1>
+        <p class="sub-heading">Shadow gives you access to full-featured high-end PC run Window-based applications on the
+          devices you own</p>
+        <div class="button-watch">
+          <a href="#" class="button secondary main-heading">Subscribe</a>
+          <a href="#" class="watch-video">
+            <i class="fas fa-play"></i>
+            Watch Video</a>
+          <p class="price-small">From $29.99/month</p>
+        </div>
+      </div>
+
+      <div>
+        <img src="./img/asteroid.png" alt="random orangered image" class="landing-image">
+      </div>
+
+    </section>
+
+    <div class="sec2-head">
+      <h2>Get the power of a <span class="cloud-text"> high-end PC</span>, on devices you already own</h2>
+    </div>
+
+    <section id="sticky-scrolling">
+      <div class="scroller">
+        <img src="./img/computer-transparent2.png" alt="apple-monitor" class="monitor">
+        <div class="info">
+          <div class="info-1">
+            <div>
+              <i class="fa-solid fa-bars-staggered"></i>
+            </div>
+            <div>
+              <h3 class="h3-heads">Best streaming quality</h3>
+              <p class="text-scroll">Enjoy high resolutions and high frame rates: up to 4K at 60FPS or 144FPS in Full
+                HD.</p>
+            </div>
+          </div>
+
+          <div class="info-1">
+            <div>
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <div>
+              <h3 class="h3-heads">Ultra low latency</h3>
+              <p class="text-scroll">Run all your Windows software remotely without noticeable latency.</p>
+            </div>
+          </div>
+
+          <div class="info-1">
+            <div>
+              <i class="fa-solid fa-gamepad"></i>
+            </div>
+            <div>
+              <h3 class="h3-heads">Bring your gear</h3>
+              <p class="text-scroll">Enjoy your Shadow with popular keyboards, headsets, mice, and game controllers you already own.</p>
+            </div>
+          </div>
+
+          <div class="info-1">
+            <div>
+              <i class="fa-solid fa-cloud-arrow-down"></i>
+            </div>
+            <div>
+              <h3 class="h3-heads">Install all the games and software you own</h3>
+              <p class="text-scroll">Enjoy a native Windows 10 PC experience. Access all your PC application software with the highest quality streaming experience.</p>
+            </div>
+          </div>
+
+          <div class="info-1">
+            <a href="#" class="techspecs">Tech Specs</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="section-easy">
+      <div class="sec3-head">
+        <h2>Easy to get started. <span class="cloud-text"> Cancel anytime.</span></h2>
+      </div>
+
+      <div class="getting-started">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </section>
+
+  </main>
+  </div>
+
+  <!-- Put content here... -->
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
