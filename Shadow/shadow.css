@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
 
+:root {
+    --clr-orange: rgb(230, 93, 44);
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -12,6 +16,10 @@ html {
     color: white;
     /* font-family: "Oswald", sans-serif; */
     font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 .header {
@@ -36,7 +44,6 @@ html {
 .menu li a {
     font-size: 1.5rem;
     color: #eee;
-    text-decoration: none;
     cursor: pointer;
 }
 
@@ -47,10 +54,6 @@ html {
 .logodiv,
 .logodiv a {
     font-size: 3rem;
-}
-
-.logodiv a {
-    text-decoration: none;
 }
 
 .menu-icon {
@@ -224,7 +227,7 @@ section {
 }
 
 .cloud-text {
-    color: rgb(230, 93, 44);
+    color: var(--clr-orange);
 }
 
 .sub-heading {
@@ -239,7 +242,7 @@ section {
 }
 
 .watch-video {
-    color: rgb(230, 93, 44);
+    color: var(--clr-orange);
     font-size: 2rem;
     text-decoration: none;
     margin-left: 2rem;
@@ -253,8 +256,9 @@ section {
 }
 
 .landing-image {
-    transform: rotate(60deg) scale(1.4);
-
+    position: relative;
+    left: -40px;
+    /* box-shadow: 0 0 8px 3px black inset; */
 }
 
 .button-watch {
@@ -268,7 +272,6 @@ section {
 
 .main-title {
     margin: 0 3rem;
-    letter-spacing: .1rem;
     grid-column: 1fr;
 }
 
@@ -281,6 +284,8 @@ section {
 }
 
 /* section 2 */
+
+
 
 .sec2-head,
 .sec3-head {
@@ -295,7 +300,7 @@ section {
 }
 
 #sticky-scrolling {
-    width: 110%;
+    width: 115%;
     position: relative;
     left: -20rem;
     
@@ -313,11 +318,16 @@ section {
 }
 
 
+
 .monitor {
+    /* background: url('./img/bg-orangered.png') no-repeat;
+    background-position: -10rem -20rem; */
+    
     position: sticky;
     filter: blur(1px);
     top: 20%;
 }
+
 
 .info div {
     margin: 5rem 0;
@@ -332,20 +342,20 @@ section {
 
 .h3-heads {
     margin-bottom: 1rem;
+    font-size: 1.8rem;
 }
 
-.text-scroll {
+.p-tags {
     font-size: 1.4rem;
 }
 
-
 .fa-solid {
-    /* border: 1px solid red; */
     color: white;
     font-size: 20rem;
     font-size: 5rem;
     margin-right: 3rem;
 }
+
 
 .techspecs {
     color: #fff;
@@ -369,6 +379,47 @@ section {
 
 /* section 3 */
 .sec3-head {
-    /* margin: 0 auto; */
+    margin: 0 auto;
     text-align: center;
+}
+
+.fa-microchip,
+.fa-laptop-code,
+.fa-gauge-simple-high {
+    color: white;
+    font-size: 4rem;
+    margin-bottom: 4rem;
+}
+
+#section-easy {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+
+}
+
+.getting-started {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0rem 3rem;
+    /* flex-wrap: wrap; */
+}
+
+.adj-lh {
+    margin-bottom: 3.1rem;
+}
+
+.easy {
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.easy-links {
+    color: var(--clr-orange);
+    font-size: 1.6rem;
+    font-weight: bold;
 }
