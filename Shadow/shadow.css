@@ -2,6 +2,8 @@
 
 :root {
     --clr-orange: rgb(230, 93, 44);
+    --clr-background: rgb(37, 44, 46);
+    --clr-gradient: radial-gradient(rgb(0,0,0) 60%, rgb(37, 44, 46))
 }
 
 *, *::before, *::after {
@@ -12,10 +14,11 @@
 
 html {
     font-size: 62.5%;
-    background-color: #000;
+    background: #111;
     color: white;
     /* font-family: "Oswald", sans-serif; */
     font-family: 'Open Sans', sans-serif;
+    background: var(--clr-gradient);
 }
 
 a {
@@ -145,7 +148,7 @@ a {
 }
 
 .menu {
-    background-color: #111;
+    /* background-color: #111; */
     display: flex;
 }
 
@@ -219,6 +222,8 @@ section {
     width: 100%;
     position: relative;
     top: 10rem;
+    margin: 10rem 0;
+    
 }
 
 .heading {
@@ -286,17 +291,17 @@ section {
 /* section 2 */
 
 
-
 .sec2-head,
 .sec3-head {
     color: #eee;
     font-size: 1.6rem;
     margin: 0 auto;
-    margin-top: 7rem;
+    /* margin-top: 7rem; */
 }
 
 .sec2-head {
     width: 33%;
+    
 }
 
 #sticky-scrolling {
@@ -309,12 +314,12 @@ section {
 .scroller {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin: 0 1rem;
+    gap: 1.6rem;
+    margin: 0 2rem;
 }
 
 .info {
-    margin: 7rem 0;
+    margin: 30rem 0;
 }
 
 
@@ -322,7 +327,6 @@ section {
 .monitor {
     /* background: url('./img/bg-orangered.png') no-repeat;
     background-position: -10rem -20rem; */
-    
     position: sticky;
     filter: blur(1px);
     top: 20%;
@@ -422,4 +426,89 @@ section {
     color: var(--clr-orange);
     font-size: 1.6rem;
     font-weight: bold;
+    padding: 1rem;
+}
+
+
+
+/* quotes section */
+
+#quotes-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 5rem;
+    width: 89%;
+    margin: 0rem auto;
+    
+}
+
+.laptop-logo {
+    background-color: white;
+    filter: invert();
+    width: 50%;
+    /* margin-top: 2rem; */
+}
+
+.techradar-logo {
+    width: 40%;
+    /* margin-top: 2rem; */
+}
+
+.quote-text {
+    font-size: 1.6rem;
+    text-align: left;
+    font-style: italic;
+    color: #eee;
+}
+
+blockquote {
+    margin-bottom: 3rem;
+}
+
+blockquote::after {
+    content: '';
+    width: 5rem;
+    height: .2rem;
+    background-color: lightgrey;
+    display: inline-block;
+    position: relative;
+    margin-top: 5rem;
+}
+
+.quote-text::before {
+    content: '" ';
+}
+
+.quote-text::after {
+    content: ' "';
+}
+
+figcaption img {
+    width: 30%;
+}
+
+.techradar-text, .laptop-text {
+    margin-bottom: 2rem;
+}
+
+/* price section */
+.price-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 0;
+    background: url(./img/splash-2.png), rgb(37, 44, 46);
+    background-position: 60rem -80rem;
+    /* background: rgba(255, 255, 255, 0.2);  */
+    backdrop-filter: blur(10px);
+    
+}
+
+.get-price {
+    font-size: 1.6rem;
+    margin: 0 auto;
+    width: 22%;
+    margin-bottom: 3rem;
 }
