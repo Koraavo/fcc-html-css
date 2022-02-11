@@ -5,17 +5,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Collaboration</title>
+  <title>Shadow Tech Landing Page</title>
   <link rel="stylesheet" href="./shadow.css">
 
-
+  <!-- FontAwesome libs -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
 
+  <!-- normalise -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+
+  <!-- jquery just in case -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -61,14 +64,14 @@
         </label>
       </div>
 
-      <div class="login-button login-show"><a href="LOGIN">LOGIN</a></div>
+      <div class="login-button login-show"><a href="LOGIN">Log in</a></div>
 
       <ul class="menu mobile-hide">
-        <li class="nav-link "><a href="#">What is Shadow</a></li>
-        <li class="nav-link "><a href="#">Tech Specs</a></li>
-        <li class="nav-link "><a href="#">Requirements</a></li>
-        <li class="nav-link "><a href="#">Support</a></li>
-        <li class="nav-link button "><a href="#">Login</a></li>
+        <li class="nav-link "><a href="#" class="link-hover">What is Shadow</a></li>
+        <li class="nav-link "><a href="#" class="link-hover">Tech Specs</a></li>
+        <li class="nav-link "><a href="#" class="link-hover">Requirements</a></li>
+        <li class="nav-link "><a href="#" class="link-hover">Support</a></li>
+        <li class="nav-link button "><a href="#" class="link-hover">Login</a></li>
         <li class="nav-link button secondary nav-links"><a href="#">Subscribe</a></li>
       </ul>
 
@@ -79,12 +82,12 @@
   <main>
     <section id="home">
       <div class="main-title">
-        <h1 class="heading">Your new PC is in the <div class="cloud-text">Cloud</div>
+        <h1 class="title-h1">Your new PC is in the <div class="cloud-text">Cloud</div>
         </h1>
         <p class="sub-heading">Shadow gives you access to full-featured high-end PC run Window-based applications on the
           devices you own</p>
         <div class="button-watch">
-          <a href="#" class="button secondary main-heading">Subscribe</a>
+          <a href="#" class="button secondary subscribe-button">Subscribe</a>
           <a href="#" class="watch-video">
             <i class="fas fa-play"></i>
             Watch Video</a>
@@ -93,18 +96,22 @@
       </div>
 
       <div>
-        <img src="./img/gamer-1.png" alt="random orangered image" class="landing-image" width="90%">
+        <img src="./img/gamer-2.png" alt="random orangered image" class="landing-image" width="90%">
       </div>
 
     </section>
 
-    <div class="sec2-head">
-      <h2>Get the power of a <span class="cloud-text"> high-end PC</span>, on devices you already own</h2>
-    </div>
+    <section>
+      <div class="sec2-head">
+        <h2>Get the power of a <span class="cloud-text"> high-end PC</span>, on devices you already own</h2>
+      </div>
+    </section>
 
+    
     <section id="sticky-scrolling">
       <div class="scroller">
-        <img src="./img/computer-transparent2-2.png" alt="apple-monitor" class="monitor">
+        
+        <img src="./img/computer-transparent2-3.png" alt="apple-monitor" class="monitor">
         <div class="info">
           <div class="info-1">
             <div>
@@ -133,7 +140,8 @@
             </div>
             <div>
               <h3 class="h3-heads">Bring your gear</h3>
-              <p class="p-tags">Enjoy your Shadow with popular keyboards, headsets, mice, and game controllers you already own.</p>
+              <p class="p-tags">Enjoy your Shadow with popular keyboards, headsets, mice, and game controllers you
+                already own.</p>
             </div>
           </div>
 
@@ -143,7 +151,8 @@
             </div>
             <div>
               <h3 class="h3-heads">Install all the games and software you own</h3>
-              <p class="p-tags">Enjoy a native Windows 10 PC experience. Access all your PC application software with the highest quality streaming experience.</p>
+              <p class="p-tags">Enjoy a native Windows 10 PC experience. Access all your PC application software with
+                the highest quality streaming experience.</p>
             </div>
           </div>
 
@@ -167,14 +176,14 @@
           <p class="p-tags easy">Shadow requires a stable connection with a speed of at least 15 Mbps.</p>
           <a href="#" class="easy-links">System requirements</a>
         </div>
-        
+
         <div>
           <i class="fa-solid fa-microchip"></i>
           <h3 class="h3-heads adj-lh">We set up your Shadow PC</h3>
-          <p class="p-tags easy" >After you subscribe, we create your Cloud PC in our nearest datacenter.</p>
+          <p class="p-tags easy">After you subscribe, we create your Cloud PC in our nearest datacenter.</p>
           <!-- <a href="#" class="easy-links">System requirements</a> -->
         </div>
-        
+
         <div>
           <i class="fas fa-laptop-code"></i>
           <h3 class="h3-heads">Install our apps and enjoy your cloud PC!</h3>
@@ -183,46 +192,49 @@
         </div>
       </div>
       <div class="sec3-head">
-        <a href="#" class="button secondary main-heading">Subscribe</a>
+        <a href="#" class="button secondary subscribe-button">Subscribe</a>
       </div>
     </section>
 
     <section id="quotes-group">
-          <figure class="quotes">
-            <blockquote>
-              <p class="quote-text techradar-text">
-              Shadow Boost is great value for money because you get an entire PC with storage that you can access from anywhere.</p>
-            </blockquote>
-            <figcaption>
-              <img src="./img/techradar-logo.png" alt="tech-logo" class="techradar-logo">
-            </figcaption>
-          </figure>
-          <figure class="quotes">
-            <blockquote>
-              <p class="quote-text"> You’re getting the full desktop experience, and can run tax software, Photoshop, or video capture tools just as easily as you can cutting-edge PC games.
-              </p>
-              </blockquote>
-            <figcaption>
-              <img src="./img/PCWorld-logo.png" alt="pcworld-logo">
-            </figcaption>
-          </figure>
-          <figure class="quotes">
-            <blockquote>
-            <p class="quote-text laptop-text">  Shadow effectively gives you a high-end PC at a fraction of the cost.</p>
-            </blockquote>
-            <figcaption>
-              <img src="./img/laptop-logo1.png" alt="laptop-logo" class="laptop-logo">
-            </figcaption>
-          </figure>
-          <figure class="quotes">
-            <blockquote>
-              <p class="quote-text"> As long as you have a good network connection, you don't need a powerful computer to do all the PC gaming you want.</p>
-              </blockquote>
-            <figcaption>
-              <img src="./img/pc-mag-logo.png" alt="pc-mag-logo">
-            </figcaption>
-          </figure>
-      
+      <figure class="quotes">
+        <blockquote>
+          <p class="quote-text techradar-text">
+            Shadow Boost is great value for money because you get an entire PC with storage that you can access from
+            anywhere.</p>
+        </blockquote>
+        <figcaption>
+          <img src="./img/techradar-logo.png" alt="tech-logo" class="techradar-logo">
+        </figcaption>
+      </figure>
+      <figure class="quotes">
+        <blockquote>
+          <p class="quote-text"> You’re getting the full desktop experience, and can run tax software, Photoshop, or
+            video capture tools just as easily as you can cutting-edge PC games.
+          </p>
+        </blockquote>
+        <figcaption>
+          <img src="./img/PCWorld-logo.png" alt="pcworld-logo">
+        </figcaption>
+      </figure>
+      <figure class="quotes">
+        <blockquote>
+          <p class="quote-text laptop-text"> Shadow effectively gives you a high-end PC at a fraction of the cost.</p>
+        </blockquote>
+        <figcaption>
+          <img src="./img/laptop-logo1.png" alt="laptop-logo" class="laptop-logo">
+        </figcaption>
+      </figure>
+      <figure class="quotes">
+        <blockquote>
+          <p class="quote-text"> As long as you have a good network connection, you don't need a powerful computer to do
+            all the PC gaming you want.</p>
+        </blockquote>
+        <figcaption>
+          <img src="./img/pc-mag-logo.png" alt="pc-mag-logo">
+        </figcaption>
+      </figure>
+
     </section>
 
     <section class="price-section">
@@ -230,9 +242,8 @@
         <h2>Get your Shadow PC for $29.99 per month</h2>
       </div>
       <div class="sec3-head">
-        <a href="#" class="button secondary main-heading">Subscribe</a>
+        <a href="#" class="button secondary subscribe-button">Subscribe</a>
       </div>
-
     </section>
 
   </main>

@@ -3,7 +3,7 @@
 :root {
     --clr-orange: rgb(230, 93, 44);
     --clr-background: rgb(37, 44, 46);
-    --clr-gradient: radial-gradient(rgb(0,0,0) 60%, rgb(37, 44, 46))
+    --clr-gradient: radial-gradient(rgb(0,0,0) 50%, rgb(37, 44, 46))
 }
 
 *, *::before, *::after {
@@ -25,7 +25,20 @@ a {
     text-decoration: none;
 }
 
-.header {
+.link-hover:active {
+    padding: .5rem;
+    content: '';
+    width: 10rem;
+    height: 1rem;
+    background: rgb(190, 63, 0);
+    border-radius: 2rem;
+    background-position: 0 -50rem;
+    /* background: linear-gradient(rgb(190, 63, 0) 50%, rgb(96, 32, 0) 100% );
+    
+    padding: .5rem; */
+}
+
+#header {
     background-color: #111;
     position: fixed;
     top: 0;
@@ -48,6 +61,7 @@ a {
     font-size: 1.5rem;
     color: #eee;
     cursor: pointer;
+    font-weight: 700;
 }
 
 .logo {
@@ -128,6 +142,7 @@ a {
     border-bottom-color: transparent;
     border-right-color: rgb(255, 69, 0);
 }
+
 
 /* Finally starting with positioning things */
 
@@ -226,7 +241,7 @@ section {
     
 }
 
-.heading {
+.title-h1 {
     color: #fff;
     font-size: 4rem;    
 }
@@ -239,8 +254,9 @@ section {
     font-size: 1.6rem;
 }
 
-.button.secondary.main-heading {
+.button.secondary.subscribe-button {
     font-size: 2rem;
+    font-weight: 700;
     text-decoration: none;
     padding: 1.2rem 1.9rem;
 
@@ -257,13 +273,15 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-height: 100vh;
-    height: 90vh;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem auto;
 }
 
 .landing-image {
     position: relative;
-    left: -40px;
-    /* box-shadow: 0 0 8px 3px black inset; */
+    top: 3rem;
 }
 
 .button-watch {
@@ -301,6 +319,8 @@ section {
 
 .sec2-head {
     width: 33%;
+    /* position: relative;
+    left: 20rem; */
     
 }
 
