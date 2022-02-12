@@ -4,9 +4,10 @@
     --clr-orange: rgb(230, 93, 44);
     --clr-background: rgb(37, 44, 46);
     --clr-gradient: radial-gradient(rgb(0,0,0) 50%, rgb(37, 44, 46));
-    --fnt-h1: 4rem;
-    --fnt-h3: 2.2rem; 
-    --fnt-p: 2rem;
+    --fnt-h1: 3.5rem;
+    /* --fnt-h1: 3.5rem; */
+    --fnt-h3: 2rem; 
+    --fnt-p: 1.8rem;
     --fnt-btn: 1.6rem;  
     --fnt-logo: 3rem
 
@@ -32,6 +33,7 @@ html {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 .link-hover:active,
@@ -85,6 +87,10 @@ a {
 
 .menu-icon {
     cursor: pointer;
+}
+
+#header-img {
+    margin-right: 1rem;
 }
 
 
@@ -287,6 +293,7 @@ h1 .cloud-text {
     font-size: var(--fnt-p);
     text-decoration: none;
     margin-left: 1rem;
+    font-weight: 700;
 }
 
 #home {
@@ -311,8 +318,8 @@ h1 .cloud-text {
 
 .price-small {
     position: relative;
-    top: 1em;
-    left: 1em;
+    top: 3rem;
+    left: 1rem;
     font-size: var(--fnt-btn);
     color: lightgray;
 }
@@ -322,7 +329,7 @@ h1 .cloud-text {
 .power-heading,
 .easy-start-text {
     color: #eee;
-    font-size: var(--fnt-h3);
+    font-size: var(--fnt-p);
     margin: 0 auto;
 }
 
@@ -332,7 +339,7 @@ h1 .cloud-text {
 
 #get-power {
     width: 100%;
-    margin: 0 auto;
+    margin: 10rem auto;
     text-align: center;
 }
 
@@ -438,6 +445,7 @@ h1 .cloud-text {
     text-align: center;
     justify-content: space-around;
     align-items: flex-start;
+    margin: 0 5rem;
     gap: 2rem;
 }
 
@@ -552,7 +560,7 @@ figcaption img {
 
 /* media queries */
 
-@media (max-width:900px) {
+@media (max-width:950px) {
 
     :root {
         --fnt-h1: 3.8rem;
@@ -561,21 +569,7 @@ figcaption img {
         --fnt-btn: 1.6rem;   
     }
 
-    /* menu */
-
-    /* Finally starting with positioning things */
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
     /* main page */
 
