@@ -44,209 +44,10 @@ a {
     content: '';
     width: 10rem;
     height: 1rem;
-    background: rgb(190, 63, 0);
     border-radius: 2rem;
-    background-position: 0 -50rem;
-    /* background: linear-gradient(rgb(190, 63, 0) 50%, rgb(96, 32, 0) 100% );
-    
-    padding: .5rem; */
-}
-
-#header {
-    background-color: #111;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-    padding: 3rem 2rem;
-}
-
-.menu li:first-child {
-    margin-top: 10rem;
 }
 
 
-.menu li {
-    list-style: none;
-}
-
-.login-button a,
-.menu li a {
-    font-size: var(--fnt-btn);
-    color: #eee;
-    cursor: pointer;
-    font-weight: 700;
-}
-
-.logo {
-    color: white;
-}
-
-.logodiv,
-.logodiv a {
-    font-size: var(--fnt-logo);
-}
-
-.menu-icon {
-    cursor: pointer;
-}
-
-#header-img {
-    margin-right: 1rem;
-}
-
-
-/* navbars */
-
-.bars,
-.bars::before,
-.bars::after   {
-    background-color: #fff;
-    display: inline-block;
-    height: .3rem;
-    width: 3rem;
-    position: relative;
-    
-}
-
-.bars::before {
-    content: '';
-    position: absolute;
-    top: -1rem;
-    transition: all .3s ease-out;
-}
-
-.bars::after {
-    content: '';
-    position: absolute;
-    top: 1rem;
-    transition: all .3s ease-out;
-}
-
-.menu-btn:checked ~ .menu-icon .bars{
-    background: transparent;
-}
-
-.menu-btn:checked ~ .menu-icon .bars::before{
-    transform: rotate(45deg);
-    top: 0;
-}
-
-.menu-btn:checked ~ .menu-icon .bars::after{
-    transform: rotate(-45deg);
-    top: 0;
-}
-
-/* .button.secondary.subscribe-button {
-    display: block;
-} */
-
-.button.secondary {
-    color: #fff;
-    background: linear-gradient(90deg, rgb(240, 111, 64), rgb(255, 69, 0));
-    border-radius: 10rem;
-    /* display: inline-block; */
-    padding: 1rem 3rem;
-    cursor: pointer;
-    border: 5px solid rgb(90, 26, 3);
-}
-
-
-.button.secondary:hover,
-.button.secondary:focus {
-    border-left-color: rgb(240, 111, 64);
-    border-top-color: transparent;
-    border-bottom-color: transparent;
-    border-right-color: rgb(255, 69, 0);
-}
-
-
-/* Finally starting with positioning things */
-
-.nav-container {
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr 1fr;
-    align-content: center;
-    margin: 0 2rem;
-    gap: 2rem;
-    justify-content: center;
-    
-}
-
-.logodiv {
-    display: flex;
-    order: 1;
-    grid-column: 1/2
-}
-
-.menu {
-    /* background-color: #111; */
-    display: flex;
-}
-
-
-.menu {
-    order: 2;
-    grid-column: 2/6;
-    height: 100vh;
-
-    
-}
-
-.menu li {
-    padding: 1.5rem;
-    text-align: center;
-    margin: 2rem auto;
-}
-
-.login-button {
-    order: 3;
-    grid-column: 7;
-    font-size: 1.5rem;
-    position: relative;
-    top: .5rem;
-}
-
-.hamburger {
-    order: 4;
-    grid-column: 8;
-    position: relative;
-    top: .5rem;
-    cursor: pointer;
-}
-
-
-/* menu */
-/* need to slide it down instead of letting it come directly */
-.mobile-show {
-    opacity: 1;
-    max-height: 100vh;
-    display: block;
-    overflow: hidden;
-    transition: all 1s ease-out;
-}
-
-
-.mobile-hide {    
-    /* display: none; */
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    display: block;
-    transition: all 1s ease-out;
-}
-
-.login-show {
-    opacity: 1;
-}
-
-.login-hide {
-    opacity: 0;
-}
-
-.menu-btn {
-    display: none;
-}
 
 /* the main page */
 
@@ -282,12 +83,11 @@ h1 .cloud-text {
     width: 80%;
 }
 
-.button.secondary.subscribe-button {
+.subscribe-button {
     font-size: var(--fnt-p);
     font-weight: 700;
     text-decoration: none;
     padding: 1.2rem 1.9rem;
-
 }
 
 .watch-video,
@@ -310,19 +110,15 @@ h1 .cloud-text {
     margin: 5rem auto;
 }
 
-.landing-image {
-    position: relative;
-    top: 3rem;
-}
-
 .button-watch {
     position: relative;
-    top: 3rem;
+    top: -6.5rem;
+    left: 2.5rem;
 }
 
 .price-small {
     position: relative;
-    top: 3rem;
+    top: 2rem;
     left: 1rem;
     font-size: var(--fnt-btn);
     color: lightgray;
@@ -367,7 +163,7 @@ h1 .cloud-text {
 .monitor {
     position: sticky;
     filter: blur(1px);
-    top: 20%;
+    top: -4rem;
 }
 
 .info {
@@ -824,6 +620,208 @@ details[open] {
 /* 
  */
 
+
+/* header */
+
+#header {
+    background-color: #111;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 3rem 2rem;
+}
+
+.menu li:first-child {
+    margin-top: 10rem;
+}
+
+.menu li {
+    list-style: none;
+    /* border: 1px solid red; */
+    width: 30%;
+}
+
+.login-button a,
+.menu li a {
+    font-size: var(--fnt-btn);
+    color: #eee;
+    cursor: pointer;
+    font-weight: 700;
+    display: block;
+}
+
+.logo {
+    color: white;
+}
+
+.logodiv a {
+    font-size: var(--fnt-logo);
+}
+
+#header-img {
+    margin-right: .2rem;
+}
+
+
+/* navbars */
+
+.hamburger {
+    /* border: 1px solid red; */
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.bars,
+.bars::before,
+.bars::after   {
+    background-color: #fff;
+    display: inline-block;
+    height: .3rem;
+    width: 3rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.bars::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    transition: all .3s ease-out;
+}
+
+.bars::after {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    transition: all .3s ease-out;
+    
+}
+
+.menu-btn:checked ~ .menu-icon .bars{
+    background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .bars::before{
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.menu-btn:checked ~ .menu-icon .bars::after{
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.subscribe-1 {
+    color: #fff;
+    background: linear-gradient(90deg, rgb(240, 111, 64), rgb(255, 69, 0));
+    border-radius: 5rem;
+
+
+}
+
+.subscribe-button {
+    font-size: var(--fnt-p);
+    display: inline-block;
+    color: #fff;
+    background: linear-gradient(90deg, rgb(240, 111, 64), rgb(255, 69, 0));
+    border-radius: 5rem;
+    padding: 2rem 3rem;
+    cursor: pointer;
+    border: 5px solid rgb(90, 26, 3);
+}
+
+
+.subscribe-button:hover,
+.subscribe-button:focus {
+    border-left-color: rgb(240, 111, 64);
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: rgb(255, 69, 0);
+}
+
+
+
+/* menu */
+/* need to slide it down instead of letting it come directly */
+.mobile-show {
+    opacity: 1;
+    max-height: 100vh;
+    display: block;
+    overflow: hidden;
+    transition: all 1s ease-out;
+}
+
+
+.mobile-hide {    
+    /* display: none; */
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    display: block;
+    transition: all 1s ease-out;
+}
+
+.login-show {
+    opacity: 1;
+}
+
+.login-hide {
+    opacity: 0;
+}
+
+.menu-btn {
+    display: none;
+}
+
+
+/* Finally starting with positioning things */
+
+.nav-container {
+    display: grid;
+    grid-template-columns: 4fr 4fr 1fr 1fr;
+    justify-content: center;
+    gap: 0 1rem;
+    
+}
+
+.logodiv a{
+    font-size: 3rem;
+}
+
+.menu {
+    height: 100vh;
+    align-items: center;
+    
+}
+
+.menu li {
+    padding: 2rem 3rem;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.button.secondary.subscribe-button {
+    display: inline-block;
+    margin: auto;
+    position: relative;
+    top: 3rem;
+}
+
+.login-button {
+    grid-column: 5/6;
+}
+
+.hamburger {
+    position: relative;
+    top: -.6rem;
+    grid-column: 6/7;
+}
+
+
+
+
 /* media queries */
 
 @media (max-width:950px) {
@@ -857,8 +855,7 @@ details[open] {
     #home {
         grid-template-columns: 1fr;
         align-items: center;
-        justify-content: center;
-        
+        justify-content: center;   
     }
 
     .main-title {
@@ -866,6 +863,9 @@ details[open] {
     }
 
     .button-watch {
+        position: relative;
+        top: 3rem;
+        left: 0;
         display: grid;
         grid-template-columns: 1fr;
         gap: 1rem;
@@ -873,6 +873,9 @@ details[open] {
 
     .price-small {
         font-size: var(--fnt-btn);
+        position: relative;
+        top: -.2rem;
+        right: .4rem;
     }
 
     .title-h1 {
@@ -890,11 +893,6 @@ details[open] {
 
     .subscribe-button {
         font-size: var(--fnt-btn);
-    }
-
-    .landing-image {
-        position: relative;
-        left: 2rem;
     }
 
     /* sticky-scrolling-features */
@@ -1002,10 +1000,10 @@ details[open] {
     }
 
     .QandA {
-        width: 140%;
+        /* width: 140%; */
         justify-content: center;
-        position: relative;
-        left: -5rem;
+        /* position: relative;
+        left: -5rem; */
     }
 
     #details {
@@ -1086,6 +1084,16 @@ details[open] {
         font-size: 3rem;
     }
 
-    
+
+    /* menu */
+
+    .menu li {
+        padding: 1rem 3rem;
+        position: relative;
+    }
+
+    .logodiv a {
+        font-size: var(--fnt-btn);
+    }
 
 }
