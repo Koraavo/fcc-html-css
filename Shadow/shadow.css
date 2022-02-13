@@ -663,7 +663,7 @@ details[open] {
     top: 0;
     width: 100%;
     z-index: 999;
-    padding: 3rem 2rem;
+    padding: 2rem 2rem;
 }
 
 .menu li {
@@ -679,17 +679,17 @@ details[open] {
     font-weight: 700;
 }
 
-.logo {
+/* .logo {
     color: white;
-}
+} */
 
-.logodiv a {
+/* .logodiv a {
     font-size: var(--fnt-logo);
-}
+} */
 
-#header-img {
+/* #header-img {
     margin-right: .2rem;
-}
+} */
 
 
 /* menu */
