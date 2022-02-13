@@ -17,11 +17,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
-    /* border: 1px solid red; */
-
-
-    /* border: 1px solid red; */
 }
 
 html {
@@ -38,16 +33,47 @@ a {
     cursor: pointer;
 }
 
-.link-hover:active,
-.link-focus:active {
-    padding: .5rem;
-    content: '';
-    width: 10rem;
-    height: 1rem;
-    border-radius: 2rem;
+/* navbars */
+
+.bars,
+.bars::before,
+.bars::after   {
+    background-color: #fff;
+    display: inline-block;
+    height: .3rem;
+    width: 3rem;
+    position: relative;
+    cursor: pointer;
 }
 
+.bars::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    transition: all .3s ease-out;
+}
 
+.bars::after {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    transition: all .3s ease-out;
+    
+}
+
+.menu-btn:checked ~ .menu-icon .bars{
+    background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .bars::before{
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.menu-btn:checked ~ .menu-icon .bars::after{
+    transform: rotate(-45deg);
+    top: 0;
+}
 
 /* the main page */
 
@@ -59,8 +85,29 @@ section {
     
 }
 
+/* subscribe-button */
+
+.subscribe-button {
+    font-size: var(--fnt-p);
+    color: #fff;
+    background: linear-gradient(90deg, rgb(240, 111, 64), rgb(255, 69, 0));
+    border-radius: 5rem;
+    padding: 2rem 3rem;
+    text-align: center;
+    border: 5px solid rgb(90, 26, 3);
+    cursor: pointer;
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus {
+    border-left-color: rgb(240, 111, 64);
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: rgb(255, 69, 0);
+}
+
+
 .main-title {
-    margin: 0 3rem;
     grid-column: 1fr;
 }
 
@@ -83,12 +130,6 @@ h1 .cloud-text {
     width: 80%;
 }
 
-.subscribe-button {
-    font-size: var(--fnt-p);
-    font-weight: 700;
-    text-decoration: none;
-    padding: 1.2rem 1.9rem;
-}
 
 .watch-video,
 .see-more {
@@ -103,6 +144,7 @@ h1 .cloud-text {
 #home {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     max-height: 100vh;
     width: 90%;
     align-items: center;
@@ -112,16 +154,16 @@ h1 .cloud-text {
 
 .button-watch {
     position: relative;
-    top: -6.5rem;
-    left: 2.5rem;
+    top: -5em;
 }
 
 .price-small {
-    position: relative;
-    top: 2rem;
-    left: 1rem;
     font-size: var(--fnt-btn);
     color: lightgray;
+    text-align: left;
+    position: relative;
+    top: 4rem;
+    left: 1rem;
 }
 
 /* section 2 */
@@ -202,8 +244,6 @@ h1 .cloud-text {
 }
 
 
-
-
 .techspecs-btn {
     color: #fff;
     background: linear-gradient(rgb(90, 26, 3), rgb(32, 10, 1));
@@ -273,8 +313,6 @@ h1 .cloud-text {
 }
 
 
-
-
 /* quotes section */
 
 #quotes-group {
@@ -337,13 +375,13 @@ figcaption img {
 }
 
 /* price section */
-.price-section {
+#price-section {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
     padding: 10rem 0;
-    background: url(./img/splash-2.png), rgb(37, 44, 46);
+    background: url(https://i.ibb.co/nP2QpBf/splash-2.png), rgb(37, 44, 46);
     background-position: 60rem -80rem;
     backdrop-filter: blur(10px);
     gap: 5rem;
@@ -604,21 +642,17 @@ details[open] {
     cursor: pointer;
 }
 
-/* select {
-    margin-bottom: 10px;
-    margin-top: 10px;
-    font-family: cursive, sans-serif;
-    outline: 0;
-    background: #2ecc71;
-    color: #fff;
-    border: 1px solid crimson;
-    padding: 4px;
-    border-radius: 9px;
-  } */
+#email {
+    /* margin: 1rem 2rem; */
+    padding: 1rem 6rem;
+    font-size: var(--fnt-btn);
+}
 
+#submit {
+    margin: 1rem 0;
+    padding: 1rem 3rem;
+}
 
-/* 
- */
 
 
 /* header */
@@ -632,14 +666,9 @@ details[open] {
     padding: 3rem 2rem;
 }
 
-.menu li:first-child {
-    margin-top: 10rem;
-}
-
 .menu li {
     list-style: none;
-    /* border: 1px solid red; */
-    width: 30%;
+    width: 40%;
 }
 
 .login-button a,
@@ -648,7 +677,6 @@ details[open] {
     color: #eee;
     cursor: pointer;
     font-weight: 700;
-    display: block;
 }
 
 .logo {
@@ -664,111 +692,7 @@ details[open] {
 }
 
 
-/* navbars */
-
-.hamburger {
-    /* border: 1px solid red; */
-    cursor: pointer;
-    padding: 1rem;
-}
-
-.bars,
-.bars::before,
-.bars::after   {
-    background-color: #fff;
-    display: inline-block;
-    height: .3rem;
-    width: 3rem;
-    position: relative;
-    cursor: pointer;
-}
-
-.bars::before {
-    content: '';
-    position: absolute;
-    top: -1rem;
-    transition: all .3s ease-out;
-}
-
-.bars::after {
-    content: '';
-    position: absolute;
-    top: 1rem;
-    transition: all .3s ease-out;
-    
-}
-
-.menu-btn:checked ~ .menu-icon .bars{
-    background: transparent;
-}
-
-.menu-btn:checked ~ .menu-icon .bars::before{
-    transform: rotate(45deg);
-    top: 0;
-}
-
-.menu-btn:checked ~ .menu-icon .bars::after{
-    transform: rotate(-45deg);
-    top: 0;
-}
-
-.subscribe-1 {
-    color: #fff;
-    background: linear-gradient(90deg, rgb(240, 111, 64), rgb(255, 69, 0));
-    border-radius: 5rem;
-
-
-}
-
-.subscribe-button {
-    font-size: var(--fnt-p);
-    display: inline-block;
-    color: #fff;
-    background: linear-gradient(90deg, rgb(240, 111, 64), rgb(255, 69, 0));
-    border-radius: 5rem;
-    padding: 2rem 3rem;
-    cursor: pointer;
-    border: 5px solid rgb(90, 26, 3);
-}
-
-
-.subscribe-button:hover,
-.subscribe-button:focus {
-    border-left-color: rgb(240, 111, 64);
-    border-top-color: transparent;
-    border-bottom-color: transparent;
-    border-right-color: rgb(255, 69, 0);
-}
-
-
-
 /* menu */
-/* need to slide it down instead of letting it come directly */
-.mobile-show {
-    opacity: 1;
-    max-height: 100vh;
-    display: block;
-    overflow: hidden;
-    transition: all 1s ease-out;
-}
-
-
-.mobile-hide {    
-    /* display: none; */
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    display: block;
-    transition: all 1s ease-out;
-}
-
-.login-show {
-    opacity: 1;
-}
-
-.login-hide {
-    opacity: 0;
-}
 
 .menu-btn {
     display: none;
@@ -779,9 +703,8 @@ details[open] {
 
 .nav-container {
     display: grid;
-    grid-template-columns: 4fr 4fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
-    gap: 0 1rem;
     
 }
 
@@ -790,26 +713,18 @@ details[open] {
 }
 
 .menu {
-    height: 100vh;
-    align-items: center;
-    
+    display: flex;
 }
 
 .menu li {
-    padding: 2rem 3rem;
+    padding: 1rem 3rem;
     margin: auto;
     text-align: center;
-    width: 100%;
-}
-
-.button.secondary.subscribe-button {
-    display: inline-block;
-    margin: auto;
-    position: relative;
-    top: 3rem;
+    gap: 0 1rem;
 }
 
 .login-button {
+    display: none;
     grid-column: 5/6;
 }
 
@@ -817,8 +732,16 @@ details[open] {
     position: relative;
     top: -.6rem;
     grid-column: 6/7;
+    cursor: pointer;
+    padding: 1rem;
+    display: none;
 }
 
+.link-hover:active,
+.link-focus:active,
+.link-hover:hover {
+    color: var(--clr-orange);
+}
 
 
 
@@ -854,28 +777,10 @@ details[open] {
 
     #home {
         grid-template-columns: 1fr;
-        align-items: center;
-        justify-content: center;   
     }
 
     .main-title {
         grid-column: 1fr;
-    }
-
-    .button-watch {
-        position: relative;
-        top: 3rem;
-        left: 0;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .price-small {
-        font-size: var(--fnt-btn);
-        position: relative;
-        top: -.2rem;
-        right: .4rem;
     }
 
     .title-h1 {
@@ -893,7 +798,28 @@ details[open] {
 
     .subscribe-button {
         font-size: var(--fnt-btn);
+        padding: 1rem 2rem;
     }
+
+    .button-watch {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .button-watch {
+        position: relative;
+        top: 0;
+    }
+    
+    .price-small {
+        font-size: var(--fnt-btn);
+        position: relative;
+        top: 1rem;
+    }
+    
+
 
     /* sticky-scrolling-features */
 
@@ -1085,15 +1011,73 @@ details[open] {
     }
 
 
+
+
+
+
     /* menu */
 
+    .nav-container {
+        grid-template-columns: 4fr 4fr 1fr 1fr;
+    }
+
     .menu li {
-        padding: 1rem 3rem;
-        position: relative;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        cursor: pointer;
+    }
+
+    .menu li:first-child {
+        margin-top: 2rem;
     }
 
     .logodiv a {
         font-size: var(--fnt-btn);
+    }
+
+
+    /* hamburger animations js */
+
+    .mobile-show {
+        opacity: 1;
+        max-height: 100vh;
+        display: block;
+        transition: all 1s ease-out;
+        overflow: hidden;
+    }
+    
+    
+    .mobile-hide {    
+        opacity: 0;
+        max-height: 0;
+        display: block;
+        transition: all 1s ease-out;
+        overflow: hidden;
+    }
+    
+    .login-show {
+        opacity: 1;
+    }
+    
+    .login-hide {
+        opacity: 0;
+    }
+
+    .hamburger {
+        border: 1px solid red;
+        display: inline-block;
+    }
+
+    .login-button {
+        border: 1px solid red;
+        display: block;
+    }
+
+    .nav-link.subscribe-button {
+        padding: 1rem 5rem;
     }
 
 }
