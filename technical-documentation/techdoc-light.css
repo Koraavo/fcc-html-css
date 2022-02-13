@@ -99,6 +99,11 @@ header {
     font-size: small;
 }
 
+#main-doc ul .no-list-type::before {
+    content: '';
+    padding: 0;
+}
+
 .boldlist {
     font-weight: var(--fw-med);
     font-size: var(--fs-h2);
