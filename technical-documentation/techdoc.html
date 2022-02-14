@@ -5,9 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
     <title>GIT CHEAT</title>
-    <!-- <link rel="stylesheet" href="./techdoc-light.css"> -->
-    <link rel="stylesheet" href="./techdoc-dark.css">
+    
+    
+    <link rel="stylesheet" href="./techdoc-light.css">
+    <!-- <link rel="stylesheet" href="./techdoc-dark.css"> -->
+
+    <!-- BOXICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
         integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
@@ -21,7 +30,9 @@
 
 <body>
     <div class="mainhead">
-        <header class="main-title">GIT IT!</header>
+        <header class="main-title">GIT IT! </header>
+        <i class='bx bx-moon icon'></i>
+        <!-- <i class='bx bxs-sun icon'></i> -->
     </div>
     <nav id="navbar">
         <header>LET'S GIT THIS</header>
@@ -39,8 +50,6 @@
             <li><a href="#List_Version_History" class="nav-link">List Version History</a></li>
             <li><a href="#Remotes" class="nav-link">Remotes</a></li>
             <li><a href="#Git_Branching" class="nav-link">Git Branching</a></li>
-
-
         </ul>
     </nav>
 
@@ -549,6 +558,19 @@ testing</code>
             </article>
         </section>
     </main>
+
+    <script>
+
+        let night = '.bx-moon'
+        let day = '.bx-sun'
+
+        let icon = document.querySelector(night);
+        icon.addEventListener('click', ()=>{
+            document.body.classList.toggle('dark-theme')
+        })
+
+    </script>
+    
 
 </body>
 

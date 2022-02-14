@@ -41,14 +41,17 @@ html {
     --fw-med:  500;
     --fw-bold: 700;
 
-    --clr-light: #fff;
-    
-    --clr-header: rgb(228, 82, 58);
-    --clr-headerBG: #ddd;
 
-    --clr-dark: #303030;
+    --clr-BG-light: rgb(239, 239, 239);
+    --clr-text-light: #111;
+    --clr-BGcode-light: rgb(119, 136, 153);
+    --clr-headerBG-light: #ddd;
+    
+    --clr-BG-dark: #303030;
+    --clr-text-dark:#eee;
     --clr-header-dark: rgb(82, 50, 45);
     --clr-headerBG-dark: #404040;
+    --clr-header: rgb(228, 82, 58);
 
     --fs-h1: 2.5rem;
     --fs-h2: 2rem;
@@ -62,15 +65,17 @@ html {
 body {
     display: grid;
     grid-template-columns: 1fr;
-    background-color: var(--clr-dark);
     max-width: 100%;
     max-height: 90%;
     width: 100vw;
     height: 90vh;
     font-family: var(--ff-tertiary);
     font-size: var(--fs-body);
-    color: #eee;
+    color: var(--clr-text-dark);
+    background-color: var(--clr-BG-dark);
 }
+
+
 
 header, h2, h3, h4 {
     font-weight: var(--fw-bold);
@@ -90,6 +95,7 @@ header {
     padding: 1rem 1rem;
     
 }
+
 
 #main-doc ul li {
     list-style: none;
@@ -144,11 +150,12 @@ p {
 }
 
 #navbar header {
-    background-color: #eee;    
+    background-color: white;    
 }
 
 #navbar ul li {
     list-style: none;
+    background-color: transparent;
 }
 
 #navbar ul li a {
@@ -174,7 +181,7 @@ p {
 }
 
 .codetags {
-    color: white;
+    color: var(--clr-text-dark);
     word-break: break-all;
     display: block;
     white-space: pre-wrap ;
