@@ -1059,12 +1059,12 @@ details[open] {
     }
 
     .hamburger {
-        border: 1px solid red;
+        /* border: 1px solid red; */
         display: inline-block;
     }
 
     .login-button {
-        border: 1px solid red;
+        /* border: 1px solid red; */
         display: block;
     }
 
